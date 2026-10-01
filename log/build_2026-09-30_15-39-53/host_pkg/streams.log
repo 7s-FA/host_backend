@@ -1,0 +1,265 @@
+[0.026s] Invoking command in '/home/jeongje/final_project_ws/host/build/host_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jeongje/turtlebot3_ws/install/turtlebot3_teleop:/home/jeongje/turtlebot3_ws/install/turtlebot3_example:/home/jeongje/robot_pinky/install/vicpinky_bringup:/home/jeongje/robot_pinky/install/pinky_llm:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/jeongje/final_project_ws/host/build/host_pkg -- -j16 -l16
+[0.083s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.312s] -- Found rclcpp: 28.1.21 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.355s] -- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.372s] -- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.388s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.427s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.549s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.552s] -- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.662s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.746s] -- Found rclpy: 7.1.11 (/opt/ros/jazzy/share/rclpy/cmake)
+[0.746s] -- Found rclcpp_action: 28.1.21 (/opt/ros/jazzy/share/rclcpp_action/cmake)
+[0.794s] -- Found rosidl_default_generators: 1.6.1 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[0.809s] -- Found rosidl_adapter: 4.6.9 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[0.812s] -- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[1.255s] -- Found ament_cmake_ros: 0.12.1 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+[1.595s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.735s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.740s] -- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+[2.356s] -- Found Python3: /home/jeongje/venv/ros/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed 
+[2.401s] -- Found Python3: /home/jeongje/venv/ros/bin/python3 (found version "3.12.3") found components: Interpreter 
+[2.418s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.419s] -- Configured cppcheck include dirs: 
+[2.419s] -- Configured cppcheck exclude dirs and/or files: 
+[2.421s] -- Added test 'flake8' to check Python code syntax and style conventions
+[2.421s] -- Configured 'flake8' exclude dirs and/or files: 
+[2.423s] -- Added test 'lint_cmake' to check CMake code style
+[2.425s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[2.432s] -- Added test 'uncrustify' to check C / C++ code style
+[2.433s] -- Configured uncrustify additional arguments: 
+[2.434s] -- Added test 'xmllint' to check XML markup files
+[2.444s] -- Configuring done (2.4s)
+[2.489s] -- Generating done (0.0s)
+[2.501s] -- Build files have been written to: /home/jeongje/final_project_ws/host/build/host_pkg
+[2.531s] [  2%] [34m[1mGenerating type hashes for ROS interfaces[0m
+[2.531s] [  5%] [34m[1mGenerating Rust code for ROS interfaces[0m
+[2.539s] [  5%] Built target ament_cmake_python_copy_host_pkg
+[2.781s] [  5%] Built target host_pkg__rosidl_generator_type_description
+[2.790s] [  8%] [34m[1mGenerating C code for ROS interfaces[0m
+[2.790s] [  8%] Built target host_pkg__rs
+[2.803s] [ 11%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[2.874s] running egg_info
+[2.891s] writing host_pkg.egg-info/PKG-INFO
+[2.891s] writing dependency_links to host_pkg.egg-info/dependency_links.txt
+[2.891s] writing top-level names to host_pkg.egg-info/top_level.txt
+[2.929s] reading manifest file 'host_pkg.egg-info/SOURCES.txt'
+[2.930s] writing manifest file 'host_pkg.egg-info/SOURCES.txt'
+[2.952s] [ 11%] Built target ament_cmake_python_build_host_pkg_egg
+[3.197s] [ 11%] Built target host_pkg__cpp
+[3.272s] [ 17%] [32mBuilding C object CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/burger__description.c.o[0m
+[3.272s] [ 17%] [32mBuilding C object CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/burger__functions.c.o[0m
+[3.273s] [ 20%] [32mBuilding C object CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/burger__type_support.c.o[0m
+[3.448s] [ 22%] [32m[1mLinking C shared library libhost_pkg__rosidl_generator_c.so[0m
+[3.512s] [ 22%] Built target host_pkg__rosidl_generator_c
+[3.545s] [ 25%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[3.546s] [ 31%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[3.547s] [ 31%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[3.548s] [ 34%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[3.548s] [ 37%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[3.549s] [ 40%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[3.815s] [ 42%] [32mBuilding CXX object CMakeFiles/host_pkg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/host_pkg/action/burger__type_support.cpp.o[0m
+[3.819s] [ 45%] [32mBuilding CXX object CMakeFiles/host_pkg__rosidl_typesupport_c.dir/rosidl_typesupport_c/host_pkg/action/burger__type_support.cpp.o[0m
+[3.849s] [ 48%] [32mBuilding CXX object CMakeFiles/host_pkg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/host_pkg/action/detail/burger__type_support.cpp.o[0m
+[3.865s] [ 51%] [32mBuilding C object CMakeFiles/host_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/host_pkg/action/detail/burger__type_support.c.o[0m
+[3.889s] [ 54%] [32m[1mLinking CXX shared library libhost_pkg__rosidl_typesupport_c.so[0m
+[3.910s] [ 57%] [32m[1mLinking C shared library libhost_pkg__rosidl_typesupport_introspection_c.so[0m
+[3.923s] [ 57%] Built target host_pkg__rosidl_typesupport_c
+[3.937s] [ 57%] Built target host_pkg__rosidl_typesupport_introspection_c
+[3.942s] [ 60%] [32mBuilding CXX object CMakeFiles/host_pkg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/host_pkg/action/detail/dds_fastrtps/burger__type_support.cpp.o[0m
+[3.966s] [ 62%] [32mBuilding CXX object CMakeFiles/host_pkg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/host_pkg/action/detail/burger__type_support_c.cpp.o[0m
+[4.341s] [ 65%] [32m[1mLinking CXX shared library libhost_pkg__rosidl_typesupport_cpp.so[0m
+[4.368s] [ 68%] [32m[1mLinking CXX shared library libhost_pkg__rosidl_typesupport_introspection_cpp.so[0m
+[4.371s] [ 71%] [32m[1mLinking CXX shared library libhost_pkg__rosidl_typesupport_fastrtps_c.so[0m
+[4.395s] [ 71%] Built target host_pkg__rosidl_typesupport_cpp
+[4.433s] [ 71%] Built target host_pkg__rosidl_typesupport_introspection_cpp
+[4.436s] [ 71%] Built target host_pkg__rosidl_typesupport_fastrtps_c
+[4.651s] [ 74%] [32m[1mLinking CXX shared library libhost_pkg__rosidl_typesupport_fastrtps_cpp.so[0m
+[4.776s] [ 74%] Built target host_pkg__rosidl_typesupport_fastrtps_cpp
+[4.804s] [ 74%] Built target host_pkg
+[4.871s] [ 77%] [34m[1mGenerating Python code for ROS interfaces[0m
+[5.370s] [ 77%] Built target host_pkg__py
+[5.383s] [ 80%] [32mBuilding C object CMakeFiles/host_pkg__rosidl_generator_py.dir/rosidl_generator_py/host_pkg/action/_burger_s.c.o[0m
+[5.686s] [ 82%] [32m[1mLinking C shared library libhost_pkg__rosidl_generator_py.so[0m
+[5.780s] [ 82%] Built target host_pkg__rosidl_generator_py
+[5.844s] [ 85%] [32mBuilding C object CMakeFiles/host_pkg_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/host_pkg/_host_pkg_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[5.845s] [ 88%] [32mBuilding C object CMakeFiles/host_pkg_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/host_pkg/_host_pkg_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[5.845s] [ 91%] [32mBuilding C object CMakeFiles/host_pkg_s__rosidl_typesupport_c.dir/rosidl_generator_py/host_pkg/_host_pkg_s.ep.rosidl_typesupport_c.c.o[0m
+[6.013s] [ 94%] [32m[1mLinking C shared module rosidl_generator_py/host_pkg/host_pkg_s__rosidl_typesupport_c.so[0m
+[6.025s] [ 97%] [32m[1mLinking C shared module rosidl_generator_py/host_pkg/host_pkg_s__rosidl_typesupport_introspection_c.so[0m
+[6.040s] [100%] [32m[1mLinking C shared module rosidl_generator_py/host_pkg/host_pkg_s__rosidl_typesupport_fastrtps_c.so[0m
+[6.071s] [100%] Built target host_pkg_s__rosidl_typesupport_c
+[6.076s] [100%] Built target host_pkg_s__rosidl_typesupport_introspection_c
+[6.084s] [100%] Built target host_pkg_s__rosidl_typesupport_fastrtps_c
+[6.093s] Invoked command in '/home/jeongje/final_project_ws/host/build/host_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jeongje/turtlebot3_ws/install/turtlebot3_teleop:/home/jeongje/turtlebot3_ws/install/turtlebot3_example:/home/jeongje/robot_pinky/install/vicpinky_bringup:/home/jeongje/robot_pinky/install/pinky_llm:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/jeongje/final_project_ws/host/build/host_pkg -- -j16 -l16
+[6.101s] Invoking command in '/home/jeongje/final_project_ws/host/build/host_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jeongje/turtlebot3_ws/install/turtlebot3_teleop:/home/jeongje/turtlebot3_ws/install/turtlebot3_example:/home/jeongje/robot_pinky/install/vicpinky_bringup:/home/jeongje/robot_pinky/install/pinky_llm:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/jeongje/final_project_ws/host/build/host_pkg
+[6.107s] -- Install configuration: ""
+[6.107s] -- Installing: /home/jeongje/final_project_ws/host/install/host_pkg/share/ament_index/resource_index/rosidl_interfaces/host_pkg
+[6.107s] -- Installing: /home/jeongje/final_project_ws/host/install/host_pkg/share/host_pkg/action/Burger.json
+[6.107s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg
+[6.107s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/msg
+[6.107s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/msg/rosidl_generator_c__visibility_control.h
+[6.108s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/action
+[6.108s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/action/detail
+[6.108s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/action/detail/burger1__type_support.h
+[6.108s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/action/detail/burger1__description.c
+[6.108s] -- Installing: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/action/detail/burger__type_support.h
+[6.108s] -- Installing: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/action/detail/burger__type_support.c
+[6.108s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/action/detail/burger1__functions.h
+[6.108s] -- Installing: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/action/detail/burger__description.c
+[6.108s] -- Installing: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/action/detail/burger__functions.h
+[6.108s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/action/detail/burger1__struct.h
+[6.108s] -- Installing: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/action/detail/burger__struct.h
+[6.108s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/action/detail/burger1__functions.c
+[6.108s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/action/detail/burger1__type_support.c
+[6.108s] -- Installing: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/action/detail/burger__functions.c
+[6.108s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/action/burger1.h
+[6.109s] -- Installing: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/action/burger.h
+[6.109s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/share/host_pkg/environment/library_path.sh
+[6.109s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/share/host_pkg/environment/library_path.dsv
+[6.109s] -- Installing: /home/jeongje/final_project_ws/host/install/host_pkg/lib/libhost_pkg__rosidl_generator_c.so
+[6.109s] -- Set non-toolchain portion of runtime path of "/home/jeongje/final_project_ws/host/install/host_pkg/lib/libhost_pkg__rosidl_generator_c.so" to ""
+[6.109s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg
+[6.109s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/msg
+[6.109s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[6.109s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/action
+[6.109s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/action/detail
+[6.109s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/action/detail/burger1__rosidl_typesupport_fastrtps_c.h
+[6.109s] -- Installing: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/action/detail/burger__rosidl_typesupport_fastrtps_c.h
+[6.109s] -- Installing: /home/jeongje/final_project_ws/host/install/host_pkg/lib/libhost_pkg__rosidl_typesupport_fastrtps_c.so
+[6.109s] -- Set non-toolchain portion of runtime path of "/home/jeongje/final_project_ws/host/install/host_pkg/lib/libhost_pkg__rosidl_typesupport_fastrtps_c.so" to ""
+[6.110s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg
+[6.110s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/msg
+[6.110s] -- Installing: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/msg/rosidl_generator_cpp__visibility_control.hpp
+[6.110s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/action
+[6.110s] -- Installing: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/action/burger.hpp
+[6.110s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/action/burger1.hpp
+[6.110s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/action/detail
+[6.110s] -- Installing: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/action/detail/burger__type_support.hpp
+[6.110s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/action/detail/burger1__type_support.hpp
+[6.110s] -- Installing: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/action/detail/burger__traits.hpp
+[6.110s] -- Installing: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/action/detail/burger__struct.hpp
+[6.110s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/action/detail/burger1__traits.hpp
+[6.110s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/action/detail/burger1__struct.hpp
+[6.110s] -- Installing: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/action/detail/burger__builder.hpp
+[6.111s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/action/detail/burger1__builder.hpp
+[6.111s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg
+[6.111s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/msg
+[6.111s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[6.111s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/action
+[6.111s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/action/detail
+[6.111s] -- Installing: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/action/detail/burger__rosidl_typesupport_fastrtps_cpp.hpp
+[6.111s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/action/detail/burger1__rosidl_typesupport_fastrtps_cpp.hpp
+[6.111s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/action/detail/dds_fastrtps
+[6.111s] -- Installing: /home/jeongje/final_project_ws/host/install/host_pkg/lib/libhost_pkg__rosidl_typesupport_fastrtps_cpp.so
+[6.111s] -- Set non-toolchain portion of runtime path of "/home/jeongje/final_project_ws/host/install/host_pkg/lib/libhost_pkg__rosidl_typesupport_fastrtps_cpp.so" to ""
+[6.111s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg
+[6.111s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/msg
+[6.111s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[6.111s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/action
+[6.112s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/action/detail
+[6.112s] -- Installing: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/action/detail/burger__rosidl_typesupport_introspection_c.h
+[6.112s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/action/detail/burger1__rosidl_typesupport_introspection_c.h
+[6.112s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/action/detail/burger__type_support.c
+[6.112s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/action/detail/burger1__type_support.c
+[6.112s] -- Installing: /home/jeongje/final_project_ws/host/install/host_pkg/lib/libhost_pkg__rosidl_typesupport_introspection_c.so
+[6.112s] -- Set non-toolchain portion of runtime path of "/home/jeongje/final_project_ws/host/install/host_pkg/lib/libhost_pkg__rosidl_typesupport_introspection_c.so" to ""
+[6.112s] -- Installing: /home/jeongje/final_project_ws/host/install/host_pkg/lib/libhost_pkg__rosidl_typesupport_c.so
+[6.112s] -- Set non-toolchain portion of runtime path of "/home/jeongje/final_project_ws/host/install/host_pkg/lib/libhost_pkg__rosidl_typesupport_c.so" to ""
+[6.112s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg
+[6.112s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/action
+[6.112s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/action/detail
+[6.112s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/action/detail/burger1__rosidl_typesupport_introspection_cpp.hpp
+[6.112s] -- Installing: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/action/detail/burger__type_support.cpp
+[6.112s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/action/detail/burger1__type_support.cpp
+[6.112s] -- Installing: /home/jeongje/final_project_ws/host/install/host_pkg/include/host_pkg/host_pkg/action/detail/burger__rosidl_typesupport_introspection_cpp.hpp
+[6.113s] -- Installing: /home/jeongje/final_project_ws/host/install/host_pkg/lib/libhost_pkg__rosidl_typesupport_introspection_cpp.so
+[6.113s] -- Set non-toolchain portion of runtime path of "/home/jeongje/final_project_ws/host/install/host_pkg/lib/libhost_pkg__rosidl_typesupport_introspection_cpp.so" to ""
+[6.113s] -- Installing: /home/jeongje/final_project_ws/host/install/host_pkg/lib/libhost_pkg__rosidl_typesupport_cpp.so
+[6.113s] -- Set non-toolchain portion of runtime path of "/home/jeongje/final_project_ws/host/install/host_pkg/lib/libhost_pkg__rosidl_typesupport_cpp.so" to ""
+[6.113s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/share/host_pkg/environment/pythonpath.sh
+[6.113s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/share/host_pkg/environment/pythonpath.dsv
+[6.114s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/lib/python3.12/site-packages/host_pkg-0.0.0-py3.12.egg-info
+[6.114s] -- Installing: /home/jeongje/final_project_ws/host/install/host_pkg/lib/python3.12/site-packages/host_pkg-0.0.0-py3.12.egg-info/top_level.txt
+[6.114s] -- Installing: /home/jeongje/final_project_ws/host/install/host_pkg/lib/python3.12/site-packages/host_pkg-0.0.0-py3.12.egg-info/dependency_links.txt
+[6.114s] -- Installing: /home/jeongje/final_project_ws/host/install/host_pkg/lib/python3.12/site-packages/host_pkg-0.0.0-py3.12.egg-info/SOURCES.txt
+[6.114s] -- Installing: /home/jeongje/final_project_ws/host/install/host_pkg/lib/python3.12/site-packages/host_pkg-0.0.0-py3.12.egg-info/PKG-INFO
+[6.114s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/lib/python3.12/site-packages/host_pkg
+[6.114s] -- Installing: /home/jeongje/final_project_ws/host/install/host_pkg/lib/python3.12/site-packages/host_pkg/__init__.py
+[6.114s] -- Installing: /home/jeongje/final_project_ws/host/install/host_pkg/lib/python3.12/site-packages/host_pkg/_host_pkg_s.ep.rosidl_typesupport_introspection_c.c
+[6.114s] -- Installing: /home/jeongje/final_project_ws/host/install/host_pkg/lib/python3.12/site-packages/host_pkg/_host_pkg_s.ep.rosidl_typesupport_fastrtps_c.c
+[6.114s] -- Installing: /home/jeongje/final_project_ws/host/install/host_pkg/lib/python3.12/site-packages/host_pkg/host_pkg_s__rosidl_typesupport_introspection_c.so
+[6.114s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/lib/python3.12/site-packages/host_pkg/action
+[6.114s] -- Installing: /home/jeongje/final_project_ws/host/install/host_pkg/lib/python3.12/site-packages/host_pkg/action/__init__.py
+[6.114s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/lib/python3.12/site-packages/host_pkg/action/_burger1_s.c
+[6.114s] -- Installing: /home/jeongje/final_project_ws/host/install/host_pkg/lib/python3.12/site-packages/host_pkg/action/_burger_s.c
+[6.115s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/lib/python3.12/site-packages/host_pkg/action/_burger1.py
+[6.115s] -- Installing: /home/jeongje/final_project_ws/host/install/host_pkg/lib/python3.12/site-packages/host_pkg/action/_burger.py
+[6.115s] -- Installing: /home/jeongje/final_project_ws/host/install/host_pkg/lib/python3.12/site-packages/host_pkg/host_pkg_s__rosidl_typesupport_c.so
+[6.115s] -- Installing: /home/jeongje/final_project_ws/host/install/host_pkg/lib/python3.12/site-packages/host_pkg/_host_pkg_s.ep.rosidl_typesupport_c.c
+[6.115s] -- Installing: /home/jeongje/final_project_ws/host/install/host_pkg/lib/python3.12/site-packages/host_pkg/host_pkg_s__rosidl_typesupport_fastrtps_c.so
+[6.201s] Listing '/home/jeongje/final_project_ws/host/install/host_pkg/lib/python3.12/site-packages/host_pkg'...
+[6.201s] Compiling '/home/jeongje/final_project_ws/host/install/host_pkg/lib/python3.12/site-packages/host_pkg/__init__.py'...
+[6.201s] Listing '/home/jeongje/final_project_ws/host/install/host_pkg/lib/python3.12/site-packages/host_pkg/action'...
+[6.202s] Compiling '/home/jeongje/final_project_ws/host/install/host_pkg/lib/python3.12/site-packages/host_pkg/action/__init__.py'...
+[6.202s] Compiling '/home/jeongje/final_project_ws/host/install/host_pkg/lib/python3.12/site-packages/host_pkg/action/_burger.py'...
+[6.223s] -- Installing: /home/jeongje/final_project_ws/host/install/host_pkg/lib/python3.12/site-packages/host_pkg/host_pkg_s__rosidl_typesupport_fastrtps_c.so
+[6.225s] -- Set non-toolchain portion of runtime path of "/home/jeongje/final_project_ws/host/install/host_pkg/lib/python3.12/site-packages/host_pkg/host_pkg_s__rosidl_typesupport_fastrtps_c.so" to ""
+[6.226s] -- Installing: /home/jeongje/final_project_ws/host/install/host_pkg/lib/python3.12/site-packages/host_pkg/host_pkg_s__rosidl_typesupport_introspection_c.so
+[6.227s] -- Set non-toolchain portion of runtime path of "/home/jeongje/final_project_ws/host/install/host_pkg/lib/python3.12/site-packages/host_pkg/host_pkg_s__rosidl_typesupport_introspection_c.so" to ""
+[6.228s] -- Installing: /home/jeongje/final_project_ws/host/install/host_pkg/lib/python3.12/site-packages/host_pkg/host_pkg_s__rosidl_typesupport_c.so
+[6.230s] -- Set non-toolchain portion of runtime path of "/home/jeongje/final_project_ws/host/install/host_pkg/lib/python3.12/site-packages/host_pkg/host_pkg_s__rosidl_typesupport_c.so" to ""
+[6.231s] -- Installing: /home/jeongje/final_project_ws/host/install/host_pkg/lib/libhost_pkg__rosidl_generator_py.so
+[6.232s] -- Set non-toolchain portion of runtime path of "/home/jeongje/final_project_ws/host/install/host_pkg/lib/libhost_pkg__rosidl_generator_py.so" to ""
+[6.233s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/share/ament_index/resource_index/rust_packages/host_pkg
+[6.233s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/share/host_pkg/rust
+[6.234s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/share/host_pkg/rust/src
+[6.234s] -- Installing: /home/jeongje/final_project_ws/host/install/host_pkg/share/host_pkg/rust/src/lib.rs
+[6.235s] -- Installing: /home/jeongje/final_project_ws/host/install/host_pkg/share/host_pkg/rust/src/action.rs
+[6.235s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/share/host_pkg/rust/src/action
+[6.236s] -- Installing: /home/jeongje/final_project_ws/host/install/host_pkg/share/host_pkg/rust/src/action/rmw.rs
+[6.236s] -- Installing: /home/jeongje/final_project_ws/host/install/host_pkg/share/host_pkg/rust/Cargo.toml
+[6.237s] -- Installing: /home/jeongje/final_project_ws/host/install/host_pkg/share/host_pkg/rust/build.rs
+[6.237s] -- Installing: /home/jeongje/final_project_ws/host/install/host_pkg/share/host_pkg/action/Burger.idl
+[6.238s] -- Installing: /home/jeongje/final_project_ws/host/install/host_pkg/share/host_pkg/action/Burger.action
+[6.239s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/share/ament_index/resource_index/package_run_dependencies/host_pkg
+[6.239s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/share/ament_index/resource_index/parent_prefix_path/host_pkg
+[6.240s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/share/host_pkg/environment/ament_prefix_path.sh
+[6.240s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/share/host_pkg/environment/ament_prefix_path.dsv
+[6.241s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/share/host_pkg/environment/path.sh
+[6.241s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/share/host_pkg/environment/path.dsv
+[6.242s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/share/host_pkg/local_setup.bash
+[6.242s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/share/host_pkg/local_setup.sh
+[6.242s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/share/host_pkg/local_setup.zsh
+[6.243s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/share/host_pkg/local_setup.dsv
+[6.243s] -- Installing: /home/jeongje/final_project_ws/host/install/host_pkg/share/host_pkg/package.dsv
+[6.244s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/share/ament_index/resource_index/packages/host_pkg
+[6.244s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/share/host_pkg/cmake/export_host_pkg__rosidl_generator_cExport.cmake
+[6.244s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/share/host_pkg/cmake/export_host_pkg__rosidl_generator_cExport-noconfig.cmake
+[6.244s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/share/host_pkg/cmake/export_host_pkg__rosidl_typesupport_fastrtps_cExport.cmake
+[6.244s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/share/host_pkg/cmake/export_host_pkg__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[6.244s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/share/host_pkg/cmake/export_host_pkg__rosidl_generator_cppExport.cmake
+[6.244s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/share/host_pkg/cmake/export_host_pkg__rosidl_typesupport_fastrtps_cppExport.cmake
+[6.244s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/share/host_pkg/cmake/export_host_pkg__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[6.244s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/share/host_pkg/cmake/host_pkg__rosidl_typesupport_introspection_cExport.cmake
+[6.245s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/share/host_pkg/cmake/host_pkg__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[6.245s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/share/host_pkg/cmake/host_pkg__rosidl_typesupport_cExport.cmake
+[6.245s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/share/host_pkg/cmake/host_pkg__rosidl_typesupport_cExport-noconfig.cmake
+[6.245s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/share/host_pkg/cmake/host_pkg__rosidl_typesupport_introspection_cppExport.cmake
+[6.245s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/share/host_pkg/cmake/host_pkg__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[6.245s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/share/host_pkg/cmake/host_pkg__rosidl_typesupport_cppExport.cmake
+[6.245s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/share/host_pkg/cmake/host_pkg__rosidl_typesupport_cppExport-noconfig.cmake
+[6.245s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/share/host_pkg/cmake/export_host_pkg__rosidl_generator_pyExport.cmake
+[6.245s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/share/host_pkg/cmake/export_host_pkg__rosidl_generator_pyExport-noconfig.cmake
+[6.245s] -- Installing: /home/jeongje/final_project_ws/host/install/host_pkg/share/host_pkg/cmake/rosidl_cmake-extras.cmake
+[6.245s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/share/host_pkg/cmake/ament_cmake_export_dependencies-extras.cmake
+[6.245s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/share/host_pkg/cmake/ament_cmake_export_include_directories-extras.cmake
+[6.245s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/share/host_pkg/cmake/ament_cmake_export_libraries-extras.cmake
+[6.245s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/share/host_pkg/cmake/ament_cmake_export_targets-extras.cmake
+[6.245s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/share/host_pkg/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[6.245s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/share/host_pkg/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[6.245s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/share/host_pkg/cmake/rosidl_cmake_aggregate_target-extras.cmake
+[6.245s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/share/host_pkg/cmake/host_pkgConfig.cmake
+[6.245s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/share/host_pkg/cmake/host_pkgConfig-version.cmake
+[6.245s] -- Up-to-date: /home/jeongje/final_project_ws/host/install/host_pkg/share/host_pkg/package.xml
+[6.246s] Invoked command in '/home/jeongje/final_project_ws/host/build/host_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jeongje/turtlebot3_ws/install/turtlebot3_teleop:/home/jeongje/turtlebot3_ws/install/turtlebot3_example:/home/jeongje/robot_pinky/install/vicpinky_bringup:/home/jeongje/robot_pinky/install/pinky_llm:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/jeongje/final_project_ws/host/build/host_pkg

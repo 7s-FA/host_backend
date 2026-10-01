@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "host_pkg__rs",
+		"source" : "/home/jeongje/final_project_ws/host/build/host_pkg/host_pkg__rs"
+	}
+}

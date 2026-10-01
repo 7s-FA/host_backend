@@ -1,0 +1,15 @@
+1번 터미널 (브릿지 launch)
+source ~/opt/ros/jazzy/setup.bash
+ros2 launch rosbridge_server rosbridge_websocket_launch.xml
+
+2번 터미널 (파이썬 수신 node 실행)
+cd ~/final_project_ws/host
+source /opt/ros/jazzy/setup.bash
+source ./install/setup.bash
+python3 ./src/host_pkg/src/main.py
+
+3번 터미널 (Local Web Server 실행)
+cd ~/host_web
+python3 -m http.server 8082
+
+- 웹 켜기 : http://localhost:8082/index.html

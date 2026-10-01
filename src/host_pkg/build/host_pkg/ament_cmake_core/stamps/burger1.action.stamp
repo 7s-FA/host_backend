@@ -1,0 +1,9 @@
+# Goal (요청: 목표 거리)
+float32 target_distance
+---
+# Result (결과: 성공 여부 및 메시지)
+bool success
+string message
+---
+# Feedback (피드백: 현재까지 이동한 거리)
+float32 current_distance

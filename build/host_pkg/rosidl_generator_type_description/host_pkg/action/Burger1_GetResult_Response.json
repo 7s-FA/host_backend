@@ -1,0 +1,66 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "host_pkg/action/Burger1_GetResult_Response",
+      "fields": [
+        {
+          "name": "status",
+          "type": {
+            "type_id": 2,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "result",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "host_pkg/action/Burger1_Result"
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": [
+      {
+        "type_name": "host_pkg/action/Burger1_Result",
+        "fields": [
+          {
+            "name": "success",
+            "type": {
+              "type_id": 15,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "message",
+            "type": {
+              "type_id": 17,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      }
+    ]
+  },
+  "type_hashes": [
+    {
+      "type_name": "host_pkg/action/Burger1_GetResult_Response",
+      "hash_string": "RIHS01_76a3a492dd516744f8fefeeb6a4d7ff8dfb48fcd347d69ab4bb5305f10c0da53"
+    },
+    {
+      "type_name": "host_pkg/action/Burger1_Result",
+      "hash_string": "RIHS01_24549fe079052ab120398e11a3fbb9ca97c72bc701776f7b26863b1eab23fec8"
+    }
+  ]
+}
