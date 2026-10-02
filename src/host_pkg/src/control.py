@@ -48,7 +48,7 @@ class RobotController(Node):
 
     def controlSingleRobot(self):
         self.get_logger().info("Single Robot Flow - only Burger1 moves")
-        self.burger1.send_goal("GO_TO_MAT", 5.0) # 속도값 변수로 나중에 변경해줘야 함. -> Web 에서 받아오게끔 변경
+        self.burger1.send_goal("GO_TO_MAT", 99.0) # 속도값 변수로 나중에 변경해줘야 함. -> Web 에서 받아오게끔 변경
 
         while shared_memory.burger1_end_flag == False:
             time.sleep(0.1)
@@ -62,7 +62,7 @@ class RobotController(Node):
 
     def controlMultiRobot(self):
         self.get_logger().info("Multi Robot Flow - Both Robotes move")
-        self.burger1.send_goal("GO_TO_MAT", 5.0) # 속도값 변수로 나중에 변경해줘야 함. -> Web 에서 받아오게끔 변경
+        self.burger1.send_goal("GO_TO_MAT", 99.0) # 속도값 변수로 나중에 변경해줘야 함. -> Web 에서 받아오게끔 변경
 
         while shared_memory.burger1_end_flag == False:
             time.sleep(0.1)
@@ -71,7 +71,7 @@ class RobotController(Node):
 
         time.sleep(0.001) # 짧은 대기 시간
         if shared_memory.burger1_success == True and shared_memory.burger1_message == "IDLE":
-            self.burger2.send_goal("GO_TO_REST", 100.0) # 속도값 변수로 나중에 변경해줘야 함. -> Web 에서 받아오게끔 변경
+            self.burger2.send_goal("GO_TO_REST", 99.0) # 속도값 변수로 나중에 변경해줘야 함. -> Web 에서 받아오게끔 변경
 
             while shared_memory.burger2_end_flag == False:
                 time.sleep(0.1)
