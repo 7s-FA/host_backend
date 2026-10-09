@@ -1,8 +1,12 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/host_pkg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/host_pkg/action/detail/arm__type_support.cpp.o"
+  "CMakeFiles/host_pkg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/host_pkg/action/detail/arm__type_support.cpp.o.d"
   "CMakeFiles/host_pkg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/host_pkg/action/detail/burger__type_support.cpp.o"
   "CMakeFiles/host_pkg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/host_pkg/action/detail/burger__type_support.cpp.o.d"
   "libhost_pkg__rosidl_typesupport_introspection_cpp.pdb"
   "libhost_pkg__rosidl_typesupport_introspection_cpp.so"
+  "rosidl_typesupport_introspection_cpp/host_pkg/action/detail/arm__rosidl_typesupport_introspection_cpp.hpp"
+  "rosidl_typesupport_introspection_cpp/host_pkg/action/detail/arm__type_support.cpp"
   "rosidl_typesupport_introspection_cpp/host_pkg/action/detail/burger__rosidl_typesupport_introspection_cpp.hpp"
   "rosidl_typesupport_introspection_cpp/host_pkg/action/detail/burger__type_support.cpp"
 )

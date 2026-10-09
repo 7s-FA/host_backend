@@ -85,7 +85,9 @@ rosidl_generator_rs/host_pkg/rust/src/lib.rs: /opt/ros/jazzy/share/rosidl_genera
 rosidl_generator_rs/host_pkg/rust/src/lib.rs: /opt/ros/jazzy/share/rosidl_generator_rs/resource/templates/srv_idiomatic.rs.em
 rosidl_generator_rs/host_pkg/rust/src/lib.rs: /opt/ros/jazzy/share/rosidl_generator_rs/resource/templates/srv_rmw.rs.em
 rosidl_generator_rs/host_pkg/rust/src/lib.rs: rosidl_adapter/host_pkg/action/Burger.idl
+rosidl_generator_rs/host_pkg/rust/src/lib.rs: rosidl_adapter/host_pkg/action/Arm.idl
 rosidl_generator_rs/host_pkg/rust/src/lib.rs: rosidl_adapter/host_pkg/action/Burger.idl
+rosidl_generator_rs/host_pkg/rust/src/lib.rs: rosidl_adapter/host_pkg/action/Arm.idl
 rosidl_generator_rs/host_pkg/rust/src/lib.rs: /opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl
 rosidl_generator_rs/host_pkg/rust/src/lib.rs: /opt/ros/jazzy/share/builtin_interfaces/msg/Duration.idl
 rosidl_generator_rs/host_pkg/rust/src/lib.rs: /opt/ros/jazzy/share/builtin_interfaces/msg/Time.idl
@@ -95,7 +97,7 @@ rosidl_generator_rs/host_pkg/rust/src/lib.rs: /opt/ros/jazzy/share/action_msgs/m
 rosidl_generator_rs/host_pkg/rust/src/lib.rs: /opt/ros/jazzy/share/action_msgs/srv/CancelGoal.idl
 rosidl_generator_rs/host_pkg/rust/src/lib.rs: /opt/ros/jazzy/share/unique_identifier_msgs/msg/UUID.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/jeongje/final_project_ws/host/build/host_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Rust code for ROS interfaces"
-	cd /home/jeongje/final_project_ws/host/build/host_pkg/host_pkg__rs && /home/jeongje/venv/ros/bin/python3 /opt/ros/jazzy/share/rosidl_generator_rs/cmake/../../../lib/rosidl_generator_rs/rosidl_generator_rs --generator-arguments-file /home/jeongje/final_project_ws/host/build/host_pkg/rosidl_generator_rs__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
+	cd /home/jeongje/final_project_ws/host/build/host_pkg/host_pkg__rs && /usr/bin/python3 /opt/ros/jazzy/share/rosidl_generator_rs/cmake/../../../lib/rosidl_generator_rs/rosidl_generator_rs --generator-arguments-file /home/jeongje/final_project_ws/host/build/host_pkg/rosidl_generator_rs__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
 
 rosidl_generator_rs/host_pkg/rust/build.rs: rosidl_generator_rs/host_pkg/rust/src/lib.rs
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_rs/host_pkg/rust/build.rs

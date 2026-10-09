@@ -1,0 +1,20 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from host_pkg/action/Arm.action
+// generated code does not contain a copyright notice
+
+
+module host_pkg {
+  module action {
+    struct Arm_Goal {
+      string command;
+    };
+    struct Arm_Result {
+      boolean success;
+
+      string message;
+    };
+    struct Arm_Feedback {
+      string message;
+    };
+  };
+};

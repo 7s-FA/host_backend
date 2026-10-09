@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "host_pkg/action/detail/burger__functions.h"
+#include "rosidl_typesupport_interface/macros.h"
 #include "host_pkg/action/detail/burger__struct.h"
 #include "host_pkg/action/detail/burger__type_support.h"
-#include "rosidl_typesupport_interface/macros.h"
+#include "host_pkg/action/detail/burger__functions.h"
 
 #ifdef __cplusplus
 extern "C"

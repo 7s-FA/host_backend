@@ -2,7 +2,8 @@
   "package_name": "host_pkg",
   "output_dir": "/home/jeongje/final_project_ws/host/build/host_pkg/rosidl_generator_type_description/host_pkg",
   "idl_tuples": [
-    "/home/jeongje/final_project_ws/host/build/host_pkg/rosidl_adapter/host_pkg:action/Burger.idl"
+    "/home/jeongje/final_project_ws/host/build/host_pkg/rosidl_adapter/host_pkg:action/Burger.idl",
+    "/home/jeongje/final_project_ws/host/build/host_pkg/rosidl_adapter/host_pkg:action/Arm.idl"
   ],
   "include_paths": [
     "service_msgs:/opt/ros/jazzy/share/service_msgs",

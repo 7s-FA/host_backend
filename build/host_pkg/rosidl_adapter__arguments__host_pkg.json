@@ -1,6 +1,7 @@
 {
   "package_name": "host_pkg",
   "non_idl_tuples": [
-    "/home/jeongje/final_project_ws/host/src/host_pkg:action/Burger.action"
+    "/home/jeongje/final_project_ws/host/src/host_pkg:action/Burger.action",
+    "/home/jeongje/final_project_ws/host/src/host_pkg:action/Arm.action"
   ]
 }

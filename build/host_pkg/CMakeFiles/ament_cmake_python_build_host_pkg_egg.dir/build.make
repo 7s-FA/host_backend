@@ -67,7 +67,7 @@ include CMakeFiles/ament_cmake_python_build_host_pkg_egg.dir/compiler_depend.mak
 include CMakeFiles/ament_cmake_python_build_host_pkg_egg.dir/progress.make
 
 CMakeFiles/ament_cmake_python_build_host_pkg_egg:
-	cd /home/jeongje/final_project_ws/host/build/host_pkg/ament_cmake_python/host_pkg && /home/jeongje/venv/ros/bin/python3 setup.py egg_info
+	cd /home/jeongje/final_project_ws/host/build/host_pkg/ament_cmake_python/host_pkg && /usr/bin/python3 setup.py egg_info
 
 ament_cmake_python_build_host_pkg_egg: CMakeFiles/ament_cmake_python_build_host_pkg_egg
 ament_cmake_python_build_host_pkg_egg: CMakeFiles/ament_cmake_python_build_host_pkg_egg.dir/build.make

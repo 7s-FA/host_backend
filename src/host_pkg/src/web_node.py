@@ -35,13 +35,11 @@ class WebDataPase(Node):
             data = json.loads(msg.data)
 
             shared_memory.product = data.get('product')
-            shared_memory.quantity = float(data.get('quantity'))
+            shared_memory.quantity = int(data.get('quantity'))
             shared_memory.start_flag = bool(data.get('playing'))
 
             # 터미널에 예쁘게 출력
-            self.get_logger().info(f"[수신 성공] 시작 여부 : {shared_memory.start_flag} 수량 : {shared_memory.quantity} 제품 : {shared_memory.product}")
-
-            shared_memory.key = False
+            # self.get_logger().info(f"[수신 성공] 시작 여부 : {shared_memory.start_flag} 수량 : {shared_memory.quantity} 제품 : {shared_memory.product}")
             
         except json.JSONDecodeError:
             # JSON 형태가 아닐 경우 일반 문자열로 처리

@@ -1,3 +1,10 @@
+from host_pkg.action._arm import Arm  # noqa: F401
+from host_pkg.action._arm import Arm_GetResult_Event  # noqa: F401
+from host_pkg.action._arm import Arm_GetResult_Request  # noqa: F401
+from host_pkg.action._arm import Arm_GetResult_Response  # noqa: F401
+from host_pkg.action._arm import Arm_SendGoal_Event  # noqa: F401
+from host_pkg.action._arm import Arm_SendGoal_Request  # noqa: F401
+from host_pkg.action._arm import Arm_SendGoal_Response  # noqa: F401
 from host_pkg.action._burger import Burger  # noqa: F401
 from host_pkg.action._burger import Burger_GetResult_Event  # noqa: F401
 from host_pkg.action._burger import Burger_GetResult_Request  # noqa: F401

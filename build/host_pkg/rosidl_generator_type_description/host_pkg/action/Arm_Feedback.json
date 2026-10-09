@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "host_pkg/action/Arm_Feedback",
+      "fields": [
+        {
+          "name": "message",
+          "type": {
+            "type_id": 17,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "host_pkg/action/Arm_Feedback",
+      "hash_string": "RIHS01_96d6e5f5bd9949b07c65509cd64dc60a3f27c6f84f10ed7e90d3430be581c0e7"
+    }
+  ]
+}

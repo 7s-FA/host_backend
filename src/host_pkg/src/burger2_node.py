@@ -34,7 +34,6 @@ class Burger2ActionClient(Node):
         shared_memory.burger2_x_axis = feedback_data.feedback.robot_x
         shared_memory.burger2_y_axis = feedback_data.feedback.robot_y
         shared_memory.burger2_theta = feedback_data.feedback.robot_theta # string Data
-        shared_memory.key = False
             
         self.get_logger().info(f"\033[1;31mx_axis = {shared_memory.burger2_x_axis}, y_axis = {shared_memory.burger2_y_axis}, theta = {shared_memory.burger2_theta}\033[0m")
 

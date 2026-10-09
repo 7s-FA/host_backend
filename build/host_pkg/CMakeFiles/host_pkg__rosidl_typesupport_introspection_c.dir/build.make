@@ -78,6 +78,7 @@ rosidl_typesupport_introspection_c/host_pkg/action/detail/burger__rosidl_typesup
 rosidl_typesupport_introspection_c/host_pkg/action/detail/burger__rosidl_typesupport_introspection_c.h: /opt/ros/jazzy/share/rosidl_typesupport_introspection_c/resource/srv__rosidl_typesupport_introspection_c.h.em
 rosidl_typesupport_introspection_c/host_pkg/action/detail/burger__rosidl_typesupport_introspection_c.h: /opt/ros/jazzy/share/rosidl_typesupport_introspection_c/resource/srv__type_support.c.em
 rosidl_typesupport_introspection_c/host_pkg/action/detail/burger__rosidl_typesupport_introspection_c.h: rosidl_adapter/host_pkg/action/Burger.idl
+rosidl_typesupport_introspection_c/host_pkg/action/detail/burger__rosidl_typesupport_introspection_c.h: rosidl_adapter/host_pkg/action/Arm.idl
 rosidl_typesupport_introspection_c/host_pkg/action/detail/burger__rosidl_typesupport_introspection_c.h: /opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl
 rosidl_typesupport_introspection_c/host_pkg/action/detail/burger__rosidl_typesupport_introspection_c.h: /opt/ros/jazzy/share/builtin_interfaces/msg/Duration.idl
 rosidl_typesupport_introspection_c/host_pkg/action/detail/burger__rosidl_typesupport_introspection_c.h: /opt/ros/jazzy/share/builtin_interfaces/msg/Time.idl
@@ -87,10 +88,16 @@ rosidl_typesupport_introspection_c/host_pkg/action/detail/burger__rosidl_typesup
 rosidl_typesupport_introspection_c/host_pkg/action/detail/burger__rosidl_typesupport_introspection_c.h: /opt/ros/jazzy/share/action_msgs/srv/CancelGoal.idl
 rosidl_typesupport_introspection_c/host_pkg/action/detail/burger__rosidl_typesupport_introspection_c.h: /opt/ros/jazzy/share/unique_identifier_msgs/msg/UUID.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/jeongje/final_project_ws/host/build/host_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C introspection for ROS interfaces"
-	/home/jeongje/venv/ros/bin/python3 /opt/ros/jazzy/lib/rosidl_typesupport_introspection_c/rosidl_typesupport_introspection_c --generator-arguments-file /home/jeongje/final_project_ws/host/build/host_pkg/rosidl_typesupport_introspection_c__arguments.json
+	/usr/bin/python3 /opt/ros/jazzy/lib/rosidl_typesupport_introspection_c/rosidl_typesupport_introspection_c --generator-arguments-file /home/jeongje/final_project_ws/host/build/host_pkg/rosidl_typesupport_introspection_c__arguments.json
+
+rosidl_typesupport_introspection_c/host_pkg/action/detail/arm__rosidl_typesupport_introspection_c.h: rosidl_typesupport_introspection_c/host_pkg/action/detail/burger__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/host_pkg/action/detail/arm__rosidl_typesupport_introspection_c.h
 
 rosidl_typesupport_introspection_c/host_pkg/action/detail/burger__type_support.c: rosidl_typesupport_introspection_c/host_pkg/action/detail/burger__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/host_pkg/action/detail/burger__type_support.c
+
+rosidl_typesupport_introspection_c/host_pkg/action/detail/arm__type_support.c: rosidl_typesupport_introspection_c/host_pkg/action/detail/burger__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/host_pkg/action/detail/arm__type_support.c
 
 CMakeFiles/host_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/host_pkg/action/detail/burger__type_support.c.o: CMakeFiles/host_pkg__rosidl_typesupport_introspection_c.dir/flags.make
 CMakeFiles/host_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/host_pkg/action/detail/burger__type_support.c.o: rosidl_typesupport_introspection_c/host_pkg/action/detail/burger__type_support.c
@@ -106,14 +113,30 @@ CMakeFiles/host_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_i
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/host_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/host_pkg/action/detail/burger__type_support.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jeongje/final_project_ws/host/build/host_pkg/rosidl_typesupport_introspection_c/host_pkg/action/detail/burger__type_support.c -o CMakeFiles/host_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/host_pkg/action/detail/burger__type_support.c.s
 
+CMakeFiles/host_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/host_pkg/action/detail/arm__type_support.c.o: CMakeFiles/host_pkg__rosidl_typesupport_introspection_c.dir/flags.make
+CMakeFiles/host_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/host_pkg/action/detail/arm__type_support.c.o: rosidl_typesupport_introspection_c/host_pkg/action/detail/arm__type_support.c
+CMakeFiles/host_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/host_pkg/action/detail/arm__type_support.c.o: CMakeFiles/host_pkg__rosidl_typesupport_introspection_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/jeongje/final_project_ws/host/build/host_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/host_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/host_pkg/action/detail/arm__type_support.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/host_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/host_pkg/action/detail/arm__type_support.c.o -MF CMakeFiles/host_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/host_pkg/action/detail/arm__type_support.c.o.d -o CMakeFiles/host_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/host_pkg/action/detail/arm__type_support.c.o -c /home/jeongje/final_project_ws/host/build/host_pkg/rosidl_typesupport_introspection_c/host_pkg/action/detail/arm__type_support.c
+
+CMakeFiles/host_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/host_pkg/action/detail/arm__type_support.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/host_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/host_pkg/action/detail/arm__type_support.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jeongje/final_project_ws/host/build/host_pkg/rosidl_typesupport_introspection_c/host_pkg/action/detail/arm__type_support.c > CMakeFiles/host_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/host_pkg/action/detail/arm__type_support.c.i
+
+CMakeFiles/host_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/host_pkg/action/detail/arm__type_support.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/host_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/host_pkg/action/detail/arm__type_support.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jeongje/final_project_ws/host/build/host_pkg/rosidl_typesupport_introspection_c/host_pkg/action/detail/arm__type_support.c -o CMakeFiles/host_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/host_pkg/action/detail/arm__type_support.c.s
+
 # Object files for target host_pkg__rosidl_typesupport_introspection_c
 host_pkg__rosidl_typesupport_introspection_c_OBJECTS = \
-"CMakeFiles/host_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/host_pkg/action/detail/burger__type_support.c.o"
+"CMakeFiles/host_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/host_pkg/action/detail/burger__type_support.c.o" \
+"CMakeFiles/host_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/host_pkg/action/detail/arm__type_support.c.o"
 
 # External object files for target host_pkg__rosidl_typesupport_introspection_c
 host_pkg__rosidl_typesupport_introspection_c_EXTERNAL_OBJECTS =
 
 libhost_pkg__rosidl_typesupport_introspection_c.so: CMakeFiles/host_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/host_pkg/action/detail/burger__type_support.c.o
+libhost_pkg__rosidl_typesupport_introspection_c.so: CMakeFiles/host_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/host_pkg/action/detail/arm__type_support.c.o
 libhost_pkg__rosidl_typesupport_introspection_c.so: CMakeFiles/host_pkg__rosidl_typesupport_introspection_c.dir/build.make
 libhost_pkg__rosidl_typesupport_introspection_c.so: libhost_pkg__rosidl_generator_c.so
 libhost_pkg__rosidl_typesupport_introspection_c.so: /opt/ros/jazzy/lib/libaction_msgs__rosidl_typesupport_introspection_c.so
@@ -128,7 +151,7 @@ libhost_pkg__rosidl_typesupport_introspection_c.so: /opt/ros/jazzy/lib/libunique
 libhost_pkg__rosidl_typesupport_introspection_c.so: /opt/ros/jazzy/lib/librosidl_runtime_c.so
 libhost_pkg__rosidl_typesupport_introspection_c.so: /opt/ros/jazzy/lib/librcutils.so
 libhost_pkg__rosidl_typesupport_introspection_c.so: CMakeFiles/host_pkg__rosidl_typesupport_introspection_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/jeongje/final_project_ws/host/build/host_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C shared library libhost_pkg__rosidl_typesupport_introspection_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/jeongje/final_project_ws/host/build/host_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C shared library libhost_pkg__rosidl_typesupport_introspection_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/host_pkg__rosidl_typesupport_introspection_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -139,6 +162,8 @@ CMakeFiles/host_pkg__rosidl_typesupport_introspection_c.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/host_pkg__rosidl_typesupport_introspection_c.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/host_pkg__rosidl_typesupport_introspection_c.dir/clean
 
+CMakeFiles/host_pkg__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/host_pkg/action/detail/arm__rosidl_typesupport_introspection_c.h
+CMakeFiles/host_pkg__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/host_pkg/action/detail/arm__type_support.c
 CMakeFiles/host_pkg__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/host_pkg/action/detail/burger__rosidl_typesupport_introspection_c.h
 CMakeFiles/host_pkg__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/host_pkg/action/detail/burger__type_support.c
 	cd /home/jeongje/final_project_ws/host/build/host_pkg && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jeongje/final_project_ws/host/src/host_pkg /home/jeongje/final_project_ws/host/src/host_pkg /home/jeongje/final_project_ws/host/build/host_pkg /home/jeongje/final_project_ws/host/build/host_pkg /home/jeongje/final_project_ws/host/build/host_pkg/CMakeFiles/host_pkg__rosidl_typesupport_introspection_c.dir/DependInfo.cmake "--color=$(COLOR)"

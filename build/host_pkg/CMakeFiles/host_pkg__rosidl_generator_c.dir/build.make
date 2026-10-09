@@ -89,6 +89,7 @@ rosidl_generator_c/host_pkg/action/burger.h: /opt/ros/jazzy/share/rosidl_generat
 rosidl_generator_c/host_pkg/action/burger.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/srv__type_support.c.em
 rosidl_generator_c/host_pkg/action/burger.h: /opt/ros/jazzy/share/rosidl_generator_c/resource/srv__type_support.h.em
 rosidl_generator_c/host_pkg/action/burger.h: rosidl_adapter/host_pkg/action/Burger.idl
+rosidl_generator_c/host_pkg/action/burger.h: rosidl_adapter/host_pkg/action/Arm.idl
 rosidl_generator_c/host_pkg/action/burger.h: /opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl
 rosidl_generator_c/host_pkg/action/burger.h: /opt/ros/jazzy/share/builtin_interfaces/msg/Duration.idl
 rosidl_generator_c/host_pkg/action/burger.h: /opt/ros/jazzy/share/builtin_interfaces/msg/Time.idl
@@ -98,7 +99,7 @@ rosidl_generator_c/host_pkg/action/burger.h: /opt/ros/jazzy/share/action_msgs/ms
 rosidl_generator_c/host_pkg/action/burger.h: /opt/ros/jazzy/share/action_msgs/srv/CancelGoal.idl
 rosidl_generator_c/host_pkg/action/burger.h: /opt/ros/jazzy/share/unique_identifier_msgs/msg/UUID.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/jeongje/final_project_ws/host/build/host_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C code for ROS interfaces"
-	/home/jeongje/venv/ros/bin/python3 /opt/ros/jazzy/share/rosidl_generator_c/cmake/../../../lib/rosidl_generator_c/rosidl_generator_c --generator-arguments-file /home/jeongje/final_project_ws/host/build/host_pkg/rosidl_generator_c__arguments.json
+	/usr/bin/python3 /opt/ros/jazzy/share/rosidl_generator_c/cmake/../../../lib/rosidl_generator_c/rosidl_generator_c --generator-arguments-file /home/jeongje/final_project_ws/host/build/host_pkg/rosidl_generator_c__arguments.json
 
 rosidl_generator_c/host_pkg/action/detail/burger__functions.h: rosidl_generator_c/host_pkg/action/burger.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/host_pkg/action/detail/burger__functions.h
@@ -109,6 +110,18 @@ rosidl_generator_c/host_pkg/action/detail/burger__struct.h: rosidl_generator_c/h
 rosidl_generator_c/host_pkg/action/detail/burger__type_support.h: rosidl_generator_c/host_pkg/action/burger.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/host_pkg/action/detail/burger__type_support.h
 
+rosidl_generator_c/host_pkg/action/arm.h: rosidl_generator_c/host_pkg/action/burger.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/host_pkg/action/arm.h
+
+rosidl_generator_c/host_pkg/action/detail/arm__functions.h: rosidl_generator_c/host_pkg/action/burger.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/host_pkg/action/detail/arm__functions.h
+
+rosidl_generator_c/host_pkg/action/detail/arm__struct.h: rosidl_generator_c/host_pkg/action/burger.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/host_pkg/action/detail/arm__struct.h
+
+rosidl_generator_c/host_pkg/action/detail/arm__type_support.h: rosidl_generator_c/host_pkg/action/burger.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/host_pkg/action/detail/arm__type_support.h
+
 rosidl_generator_c/host_pkg/action/detail/burger__description.c: rosidl_generator_c/host_pkg/action/burger.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/host_pkg/action/detail/burger__description.c
 
@@ -117,6 +130,15 @@ rosidl_generator_c/host_pkg/action/detail/burger__functions.c: rosidl_generator_
 
 rosidl_generator_c/host_pkg/action/detail/burger__type_support.c: rosidl_generator_c/host_pkg/action/burger.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/host_pkg/action/detail/burger__type_support.c
+
+rosidl_generator_c/host_pkg/action/detail/arm__description.c: rosidl_generator_c/host_pkg/action/burger.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/host_pkg/action/detail/arm__description.c
+
+rosidl_generator_c/host_pkg/action/detail/arm__functions.c: rosidl_generator_c/host_pkg/action/burger.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/host_pkg/action/detail/arm__functions.c
+
+rosidl_generator_c/host_pkg/action/detail/arm__type_support.c: rosidl_generator_c/host_pkg/action/burger.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/host_pkg/action/detail/arm__type_support.c
 
 CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/burger__description.c.o: CMakeFiles/host_pkg__rosidl_generator_c.dir/flags.make
 CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/burger__description.c.o: rosidl_generator_c/host_pkg/action/detail/burger__description.c
@@ -160,11 +182,56 @@ CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/d
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/burger__type_support.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jeongje/final_project_ws/host/build/host_pkg/rosidl_generator_c/host_pkg/action/detail/burger__type_support.c -o CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/burger__type_support.c.s
 
+CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/arm__description.c.o: CMakeFiles/host_pkg__rosidl_generator_c.dir/flags.make
+CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/arm__description.c.o: rosidl_generator_c/host_pkg/action/detail/arm__description.c
+CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/arm__description.c.o: CMakeFiles/host_pkg__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/jeongje/final_project_ws/host/build/host_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/arm__description.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/arm__description.c.o -MF CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/arm__description.c.o.d -o CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/arm__description.c.o -c /home/jeongje/final_project_ws/host/build/host_pkg/rosidl_generator_c/host_pkg/action/detail/arm__description.c
+
+CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/arm__description.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/arm__description.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jeongje/final_project_ws/host/build/host_pkg/rosidl_generator_c/host_pkg/action/detail/arm__description.c > CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/arm__description.c.i
+
+CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/arm__description.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/arm__description.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jeongje/final_project_ws/host/build/host_pkg/rosidl_generator_c/host_pkg/action/detail/arm__description.c -o CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/arm__description.c.s
+
+CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/arm__functions.c.o: CMakeFiles/host_pkg__rosidl_generator_c.dir/flags.make
+CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/arm__functions.c.o: rosidl_generator_c/host_pkg/action/detail/arm__functions.c
+CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/arm__functions.c.o: CMakeFiles/host_pkg__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/jeongje/final_project_ws/host/build/host_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/arm__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/arm__functions.c.o -MF CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/arm__functions.c.o.d -o CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/arm__functions.c.o -c /home/jeongje/final_project_ws/host/build/host_pkg/rosidl_generator_c/host_pkg/action/detail/arm__functions.c
+
+CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/arm__functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/arm__functions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jeongje/final_project_ws/host/build/host_pkg/rosidl_generator_c/host_pkg/action/detail/arm__functions.c > CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/arm__functions.c.i
+
+CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/arm__functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/arm__functions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jeongje/final_project_ws/host/build/host_pkg/rosidl_generator_c/host_pkg/action/detail/arm__functions.c -o CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/arm__functions.c.s
+
+CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/arm__type_support.c.o: CMakeFiles/host_pkg__rosidl_generator_c.dir/flags.make
+CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/arm__type_support.c.o: rosidl_generator_c/host_pkg/action/detail/arm__type_support.c
+CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/arm__type_support.c.o: CMakeFiles/host_pkg__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/jeongje/final_project_ws/host/build/host_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/arm__type_support.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/arm__type_support.c.o -MF CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/arm__type_support.c.o.d -o CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/arm__type_support.c.o -c /home/jeongje/final_project_ws/host/build/host_pkg/rosidl_generator_c/host_pkg/action/detail/arm__type_support.c
+
+CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/arm__type_support.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/arm__type_support.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jeongje/final_project_ws/host/build/host_pkg/rosidl_generator_c/host_pkg/action/detail/arm__type_support.c > CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/arm__type_support.c.i
+
+CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/arm__type_support.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/arm__type_support.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jeongje/final_project_ws/host/build/host_pkg/rosidl_generator_c/host_pkg/action/detail/arm__type_support.c -o CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/arm__type_support.c.s
+
 # Object files for target host_pkg__rosidl_generator_c
 host_pkg__rosidl_generator_c_OBJECTS = \
 "CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/burger__description.c.o" \
 "CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/burger__functions.c.o" \
-"CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/burger__type_support.c.o"
+"CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/burger__type_support.c.o" \
+"CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/arm__description.c.o" \
+"CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/arm__functions.c.o" \
+"CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/arm__type_support.c.o"
 
 # External object files for target host_pkg__rosidl_generator_c
 host_pkg__rosidl_generator_c_EXTERNAL_OBJECTS =
@@ -172,6 +239,9 @@ host_pkg__rosidl_generator_c_EXTERNAL_OBJECTS =
 libhost_pkg__rosidl_generator_c.so: CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/burger__description.c.o
 libhost_pkg__rosidl_generator_c.so: CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/burger__functions.c.o
 libhost_pkg__rosidl_generator_c.so: CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/burger__type_support.c.o
+libhost_pkg__rosidl_generator_c.so: CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/arm__description.c.o
+libhost_pkg__rosidl_generator_c.so: CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/arm__functions.c.o
+libhost_pkg__rosidl_generator_c.so: CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/arm__type_support.c.o
 libhost_pkg__rosidl_generator_c.so: CMakeFiles/host_pkg__rosidl_generator_c.dir/build.make
 libhost_pkg__rosidl_generator_c.so: /opt/ros/jazzy/lib/libaction_msgs__rosidl_generator_c.so
 libhost_pkg__rosidl_generator_c.so: /opt/ros/jazzy/lib/libunique_identifier_msgs__rosidl_generator_c.so
@@ -180,7 +250,7 @@ libhost_pkg__rosidl_generator_c.so: /opt/ros/jazzy/lib/libbuiltin_interfaces__ro
 libhost_pkg__rosidl_generator_c.so: /opt/ros/jazzy/lib/librosidl_runtime_c.so
 libhost_pkg__rosidl_generator_c.so: /opt/ros/jazzy/lib/librcutils.so
 libhost_pkg__rosidl_generator_c.so: CMakeFiles/host_pkg__rosidl_generator_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/jeongje/final_project_ws/host/build/host_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C shared library libhost_pkg__rosidl_generator_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/jeongje/final_project_ws/host/build/host_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking C shared library libhost_pkg__rosidl_generator_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/host_pkg__rosidl_generator_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -191,7 +261,14 @@ CMakeFiles/host_pkg__rosidl_generator_c.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/host_pkg__rosidl_generator_c.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/host_pkg__rosidl_generator_c.dir/clean
 
+CMakeFiles/host_pkg__rosidl_generator_c.dir/depend: rosidl_generator_c/host_pkg/action/arm.h
 CMakeFiles/host_pkg__rosidl_generator_c.dir/depend: rosidl_generator_c/host_pkg/action/burger.h
+CMakeFiles/host_pkg__rosidl_generator_c.dir/depend: rosidl_generator_c/host_pkg/action/detail/arm__description.c
+CMakeFiles/host_pkg__rosidl_generator_c.dir/depend: rosidl_generator_c/host_pkg/action/detail/arm__functions.c
+CMakeFiles/host_pkg__rosidl_generator_c.dir/depend: rosidl_generator_c/host_pkg/action/detail/arm__functions.h
+CMakeFiles/host_pkg__rosidl_generator_c.dir/depend: rosidl_generator_c/host_pkg/action/detail/arm__struct.h
+CMakeFiles/host_pkg__rosidl_generator_c.dir/depend: rosidl_generator_c/host_pkg/action/detail/arm__type_support.c
+CMakeFiles/host_pkg__rosidl_generator_c.dir/depend: rosidl_generator_c/host_pkg/action/detail/arm__type_support.h
 CMakeFiles/host_pkg__rosidl_generator_c.dir/depend: rosidl_generator_c/host_pkg/action/detail/burger__description.c
 CMakeFiles/host_pkg__rosidl_generator_c.dir/depend: rosidl_generator_c/host_pkg/action/detail/burger__functions.c
 CMakeFiles/host_pkg__rosidl_generator_c.dir/depend: rosidl_generator_c/host_pkg/action/detail/burger__functions.h

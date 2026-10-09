@@ -67,14 +67,20 @@ include CMakeFiles/host_pkg__rosidl_generator_type_description.dir/compiler_depe
 include CMakeFiles/host_pkg__rosidl_generator_type_description.dir/progress.make
 
 CMakeFiles/host_pkg__rosidl_generator_type_description: rosidl_generator_type_description/host_pkg/action/Burger.json
+CMakeFiles/host_pkg__rosidl_generator_type_description: rosidl_generator_type_description/host_pkg/action/Arm.json
 
 rosidl_generator_type_description/host_pkg/action/Burger.json: /opt/ros/jazzy/lib/rosidl_generator_type_description/rosidl_generator_type_description
 rosidl_generator_type_description/host_pkg/action/Burger.json: /opt/ros/jazzy/lib/python3.12/site-packages/rosidl_generator_type_description/__init__.py
 rosidl_generator_type_description/host_pkg/action/Burger.json: rosidl_adapter/host_pkg/action/Burger.idl
+rosidl_generator_type_description/host_pkg/action/Burger.json: rosidl_adapter/host_pkg/action/Arm.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/jeongje/final_project_ws/host/build/host_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating type hashes for ROS interfaces"
-	/home/jeongje/venv/ros/bin/python3 /opt/ros/jazzy/lib/rosidl_generator_type_description/rosidl_generator_type_description --generator-arguments-file /home/jeongje/final_project_ws/host/build/host_pkg/rosidl_generator_type_description__arguments.json
+	/usr/bin/python3 /opt/ros/jazzy/lib/rosidl_generator_type_description/rosidl_generator_type_description --generator-arguments-file /home/jeongje/final_project_ws/host/build/host_pkg/rosidl_generator_type_description__arguments.json
+
+rosidl_generator_type_description/host_pkg/action/Arm.json: rosidl_generator_type_description/host_pkg/action/Burger.json
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_type_description/host_pkg/action/Arm.json
 
 host_pkg__rosidl_generator_type_description: CMakeFiles/host_pkg__rosidl_generator_type_description
+host_pkg__rosidl_generator_type_description: rosidl_generator_type_description/host_pkg/action/Arm.json
 host_pkg__rosidl_generator_type_description: rosidl_generator_type_description/host_pkg/action/Burger.json
 host_pkg__rosidl_generator_type_description: CMakeFiles/host_pkg__rosidl_generator_type_description.dir/build.make
 .PHONY : host_pkg__rosidl_generator_type_description

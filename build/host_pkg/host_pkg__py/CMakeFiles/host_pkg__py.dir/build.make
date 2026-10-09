@@ -70,8 +70,10 @@ include /home/jeongje/final_project_ws/host/build/host_pkg/host_pkg__py/CMakeFil
 /home/jeongje/final_project_ws/host/build/host_pkg/host_pkg__py/CMakeFiles/host_pkg__py: rosidl_generator_py/host_pkg/_host_pkg_s.ep.rosidl_typesupport_introspection_c.c
 /home/jeongje/final_project_ws/host/build/host_pkg/host_pkg__py/CMakeFiles/host_pkg__py: rosidl_generator_py/host_pkg/_host_pkg_s.ep.rosidl_typesupport_c.c
 /home/jeongje/final_project_ws/host/build/host_pkg/host_pkg__py/CMakeFiles/host_pkg__py: rosidl_generator_py/host_pkg/action/_burger.py
+/home/jeongje/final_project_ws/host/build/host_pkg/host_pkg__py/CMakeFiles/host_pkg__py: rosidl_generator_py/host_pkg/action/_arm.py
 /home/jeongje/final_project_ws/host/build/host_pkg/host_pkg__py/CMakeFiles/host_pkg__py: rosidl_generator_py/host_pkg/action/__init__.py
 /home/jeongje/final_project_ws/host/build/host_pkg/host_pkg__py/CMakeFiles/host_pkg__py: rosidl_generator_py/host_pkg/action/_burger_s.c
+/home/jeongje/final_project_ws/host/build/host_pkg/host_pkg__py/CMakeFiles/host_pkg__py: rosidl_generator_py/host_pkg/action/_arm_s.c
 
 rosidl_generator_py/host_pkg/_host_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/lib/rosidl_generator_py/rosidl_generator_py
 rosidl_generator_py/host_pkg/_host_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/lib/python3.12/site-packages/rosidl_generator_py/__init__.py
@@ -87,6 +89,7 @@ rosidl_generator_py/host_pkg/_host_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /op
 rosidl_generator_py/host_pkg/_host_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/rosidl_generator_py/resource/_srv_pkg_typesupport_entry_point.c.em
 rosidl_generator_py/host_pkg/_host_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/rosidl_generator_py/resource/_srv.py.em
 rosidl_generator_py/host_pkg/_host_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/host_pkg/action/Burger.idl
+rosidl_generator_py/host_pkg/_host_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/host_pkg/action/Arm.idl
 rosidl_generator_py/host_pkg/_host_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl
 rosidl_generator_py/host_pkg/_host_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/builtin_interfaces/msg/Duration.idl
 rosidl_generator_py/host_pkg/_host_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/builtin_interfaces/msg/Time.idl
@@ -96,7 +99,7 @@ rosidl_generator_py/host_pkg/_host_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /op
 rosidl_generator_py/host_pkg/_host_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/action_msgs/srv/CancelGoal.idl
 rosidl_generator_py/host_pkg/_host_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/unique_identifier_msgs/msg/UUID.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/jeongje/final_project_ws/host/build/host_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code for ROS interfaces"
-	cd /home/jeongje/final_project_ws/host/build/host_pkg/host_pkg__py && /home/jeongje/venv/ros/bin/python3 /opt/ros/jazzy/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py --generator-arguments-file /home/jeongje/final_project_ws/host/build/host_pkg/rosidl_generator_py__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
+	cd /home/jeongje/final_project_ws/host/build/host_pkg/host_pkg__py && /usr/bin/python3 /opt/ros/jazzy/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py --generator-arguments-file /home/jeongje/final_project_ws/host/build/host_pkg/rosidl_generator_py__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
 
 rosidl_generator_py/host_pkg/_host_pkg_s.ep.rosidl_typesupport_introspection_c.c: rosidl_generator_py/host_pkg/_host_pkg_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/host_pkg/_host_pkg_s.ep.rosidl_typesupport_introspection_c.c
@@ -107,17 +110,25 @@ rosidl_generator_py/host_pkg/_host_pkg_s.ep.rosidl_typesupport_c.c: rosidl_gener
 rosidl_generator_py/host_pkg/action/_burger.py: rosidl_generator_py/host_pkg/_host_pkg_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/host_pkg/action/_burger.py
 
+rosidl_generator_py/host_pkg/action/_arm.py: rosidl_generator_py/host_pkg/_host_pkg_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/host_pkg/action/_arm.py
+
 rosidl_generator_py/host_pkg/action/__init__.py: rosidl_generator_py/host_pkg/_host_pkg_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/host_pkg/action/__init__.py
 
 rosidl_generator_py/host_pkg/action/_burger_s.c: rosidl_generator_py/host_pkg/_host_pkg_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/host_pkg/action/_burger_s.c
 
+rosidl_generator_py/host_pkg/action/_arm_s.c: rosidl_generator_py/host_pkg/_host_pkg_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/host_pkg/action/_arm_s.c
+
 host_pkg__py: /home/jeongje/final_project_ws/host/build/host_pkg/host_pkg__py/CMakeFiles/host_pkg__py
 host_pkg__py: rosidl_generator_py/host_pkg/_host_pkg_s.ep.rosidl_typesupport_c.c
 host_pkg__py: rosidl_generator_py/host_pkg/_host_pkg_s.ep.rosidl_typesupport_fastrtps_c.c
 host_pkg__py: rosidl_generator_py/host_pkg/_host_pkg_s.ep.rosidl_typesupport_introspection_c.c
 host_pkg__py: rosidl_generator_py/host_pkg/action/__init__.py
+host_pkg__py: rosidl_generator_py/host_pkg/action/_arm.py
+host_pkg__py: rosidl_generator_py/host_pkg/action/_arm_s.c
 host_pkg__py: rosidl_generator_py/host_pkg/action/_burger.py
 host_pkg__py: rosidl_generator_py/host_pkg/action/_burger_s.c
 host_pkg__py: /home/jeongje/final_project_ws/host/build/host_pkg/host_pkg__py/CMakeFiles/host_pkg__py.dir/build.make

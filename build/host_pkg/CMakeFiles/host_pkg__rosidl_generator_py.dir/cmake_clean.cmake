@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/host_pkg__rosidl_generator_py.dir/rosidl_generator_py/host_pkg/action/_arm_s.c.o"
+  "CMakeFiles/host_pkg__rosidl_generator_py.dir/rosidl_generator_py/host_pkg/action/_arm_s.c.o.d"
   "CMakeFiles/host_pkg__rosidl_generator_py.dir/rosidl_generator_py/host_pkg/action/_burger_s.c.o"
   "CMakeFiles/host_pkg__rosidl_generator_py.dir/rosidl_generator_py/host_pkg/action/_burger_s.c.o.d"
   "libhost_pkg__rosidl_generator_py.pdb"

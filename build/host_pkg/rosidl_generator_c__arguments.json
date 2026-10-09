@@ -3,10 +3,12 @@
   "output_dir": "/home/jeongje/final_project_ws/host/build/host_pkg/rosidl_generator_c/host_pkg",
   "template_dir": "/opt/ros/jazzy/share/rosidl_generator_c/cmake/../resource",
   "idl_tuples": [
-    "/home/jeongje/final_project_ws/host/build/host_pkg/rosidl_adapter/host_pkg:action/Burger.idl"
+    "/home/jeongje/final_project_ws/host/build/host_pkg/rosidl_adapter/host_pkg:action/Burger.idl",
+    "/home/jeongje/final_project_ws/host/build/host_pkg/rosidl_adapter/host_pkg:action/Arm.idl"
   ],
   "ros_interface_files": [
-    "/home/jeongje/final_project_ws/host/src/host_pkg/action/Burger.action"
+    "/home/jeongje/final_project_ws/host/src/host_pkg/action/Burger.action",
+    "/home/jeongje/final_project_ws/host/src/host_pkg/action/Arm.action"
   ],
   "ros_interface_dependencies": [
     "service_msgs:/opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl",
@@ -39,6 +41,7 @@
     "/opt/ros/jazzy/share/rosidl_generator_c/cmake/../resource/srv__type_support.c.em",
     "/opt/ros/jazzy/share/rosidl_generator_c/cmake/../resource/srv__type_support.h.em",
     "/home/jeongje/final_project_ws/host/build/host_pkg/rosidl_adapter/host_pkg/action/Burger.idl",
+    "/home/jeongje/final_project_ws/host/build/host_pkg/rosidl_adapter/host_pkg/action/Arm.idl",
     "/opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl",
     "/opt/ros/jazzy/share/builtin_interfaces/msg/Duration.idl",
     "/opt/ros/jazzy/share/builtin_interfaces/msg/Time.idl",
@@ -49,6 +52,7 @@
     "/opt/ros/jazzy/share/unique_identifier_msgs/msg/UUID.idl"
   ],
   "type_description_tuples": [
-    "action/Burger.idl:/home/jeongje/final_project_ws/host/build/host_pkg/rosidl_generator_type_description/host_pkg/action/Burger.json"
+    "action/Burger.idl:/home/jeongje/final_project_ws/host/build/host_pkg/rosidl_generator_type_description/host_pkg/action/Burger.json",
+    "action/Arm.idl:/home/jeongje/final_project_ws/host/build/host_pkg/rosidl_generator_type_description/host_pkg/action/Arm.json"
   ]
 }

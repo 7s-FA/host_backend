@@ -71,6 +71,11 @@ CMakeFiles/host_pkg__cpp: rosidl_generator_cpp/host_pkg/action/detail/burger__bu
 CMakeFiles/host_pkg__cpp: rosidl_generator_cpp/host_pkg/action/detail/burger__struct.hpp
 CMakeFiles/host_pkg__cpp: rosidl_generator_cpp/host_pkg/action/detail/burger__traits.hpp
 CMakeFiles/host_pkg__cpp: rosidl_generator_cpp/host_pkg/action/detail/burger__type_support.hpp
+CMakeFiles/host_pkg__cpp: rosidl_generator_cpp/host_pkg/action/arm.hpp
+CMakeFiles/host_pkg__cpp: rosidl_generator_cpp/host_pkg/action/detail/arm__builder.hpp
+CMakeFiles/host_pkg__cpp: rosidl_generator_cpp/host_pkg/action/detail/arm__struct.hpp
+CMakeFiles/host_pkg__cpp: rosidl_generator_cpp/host_pkg/action/detail/arm__traits.hpp
+CMakeFiles/host_pkg__cpp: rosidl_generator_cpp/host_pkg/action/detail/arm__type_support.hpp
 CMakeFiles/host_pkg__cpp: rosidl_generator_cpp/host_pkg/msg/rosidl_generator_cpp__visibility_control.hpp
 
 rosidl_generator_cpp/host_pkg/action/burger.hpp: /opt/ros/jazzy/lib/rosidl_generator_cpp/rosidl_generator_cpp
@@ -93,6 +98,7 @@ rosidl_generator_cpp/host_pkg/action/burger.hpp: /opt/ros/jazzy/share/rosidl_gen
 rosidl_generator_cpp/host_pkg/action/burger.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/srv__traits.hpp.em
 rosidl_generator_cpp/host_pkg/action/burger.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/srv__type_support.hpp.em
 rosidl_generator_cpp/host_pkg/action/burger.hpp: rosidl_adapter/host_pkg/action/Burger.idl
+rosidl_generator_cpp/host_pkg/action/burger.hpp: rosidl_adapter/host_pkg/action/Arm.idl
 rosidl_generator_cpp/host_pkg/action/burger.hpp: /opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl
 rosidl_generator_cpp/host_pkg/action/burger.hpp: /opt/ros/jazzy/share/builtin_interfaces/msg/Duration.idl
 rosidl_generator_cpp/host_pkg/action/burger.hpp: /opt/ros/jazzy/share/builtin_interfaces/msg/Time.idl
@@ -102,7 +108,7 @@ rosidl_generator_cpp/host_pkg/action/burger.hpp: /opt/ros/jazzy/share/action_msg
 rosidl_generator_cpp/host_pkg/action/burger.hpp: /opt/ros/jazzy/share/action_msgs/srv/CancelGoal.idl
 rosidl_generator_cpp/host_pkg/action/burger.hpp: /opt/ros/jazzy/share/unique_identifier_msgs/msg/UUID.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/jeongje/final_project_ws/host/build/host_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
-	/home/jeongje/venv/ros/bin/python3 /opt/ros/jazzy/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/jeongje/final_project_ws/host/build/host_pkg/rosidl_generator_cpp__arguments.json
+	/usr/bin/python3 /opt/ros/jazzy/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/jeongje/final_project_ws/host/build/host_pkg/rosidl_generator_cpp__arguments.json
 
 rosidl_generator_cpp/host_pkg/action/detail/burger__builder.hpp: rosidl_generator_cpp/host_pkg/action/burger.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/host_pkg/action/detail/burger__builder.hpp
@@ -116,11 +122,31 @@ rosidl_generator_cpp/host_pkg/action/detail/burger__traits.hpp: rosidl_generator
 rosidl_generator_cpp/host_pkg/action/detail/burger__type_support.hpp: rosidl_generator_cpp/host_pkg/action/burger.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/host_pkg/action/detail/burger__type_support.hpp
 
+rosidl_generator_cpp/host_pkg/action/arm.hpp: rosidl_generator_cpp/host_pkg/action/burger.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/host_pkg/action/arm.hpp
+
+rosidl_generator_cpp/host_pkg/action/detail/arm__builder.hpp: rosidl_generator_cpp/host_pkg/action/burger.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/host_pkg/action/detail/arm__builder.hpp
+
+rosidl_generator_cpp/host_pkg/action/detail/arm__struct.hpp: rosidl_generator_cpp/host_pkg/action/burger.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/host_pkg/action/detail/arm__struct.hpp
+
+rosidl_generator_cpp/host_pkg/action/detail/arm__traits.hpp: rosidl_generator_cpp/host_pkg/action/burger.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/host_pkg/action/detail/arm__traits.hpp
+
+rosidl_generator_cpp/host_pkg/action/detail/arm__type_support.hpp: rosidl_generator_cpp/host_pkg/action/burger.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/host_pkg/action/detail/arm__type_support.hpp
+
 rosidl_generator_cpp/host_pkg/msg/rosidl_generator_cpp__visibility_control.hpp: rosidl_generator_cpp/host_pkg/action/burger.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/host_pkg/msg/rosidl_generator_cpp__visibility_control.hpp
 
 host_pkg__cpp: CMakeFiles/host_pkg__cpp
+host_pkg__cpp: rosidl_generator_cpp/host_pkg/action/arm.hpp
 host_pkg__cpp: rosidl_generator_cpp/host_pkg/action/burger.hpp
+host_pkg__cpp: rosidl_generator_cpp/host_pkg/action/detail/arm__builder.hpp
+host_pkg__cpp: rosidl_generator_cpp/host_pkg/action/detail/arm__struct.hpp
+host_pkg__cpp: rosidl_generator_cpp/host_pkg/action/detail/arm__traits.hpp
+host_pkg__cpp: rosidl_generator_cpp/host_pkg/action/detail/arm__type_support.hpp
 host_pkg__cpp: rosidl_generator_cpp/host_pkg/action/detail/burger__builder.hpp
 host_pkg__cpp: rosidl_generator_cpp/host_pkg/action/detail/burger__struct.hpp
 host_pkg__cpp: rosidl_generator_cpp/host_pkg/action/detail/burger__traits.hpp

@@ -51,6 +51,10 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/host_pkg/action" TYPE FILE FILES "/home/jeongje/final_project_ws/host/build/host_pkg/rosidl_generator_type_description/host_pkg/action/Arm.json")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/host_pkg/host_pkg" TYPE DIRECTORY FILES "/home/jeongje/final_project_ws/host/build/host_pkg/rosidl_generator_c/host_pkg/" REGEX "/[^/]*\\.h$")
 endif()
 
@@ -262,7 +266,7 @@ endif()
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   execute_process(
         COMMAND
-        "/home/jeongje/venv/ros/bin/python3" "-m" "compileall"
+        "/usr/bin/python3" "-m" "compileall"
         "/home/jeongje/final_project_ws/host/install/host_pkg/lib/python3.12/site-packages/host_pkg"
       )
 endif()
@@ -375,7 +379,15 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/host_pkg/action" TYPE FILE FILES "/home/jeongje/final_project_ws/host/build/host_pkg/rosidl_adapter/host_pkg/action/Arm.idl")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/host_pkg/action" TYPE FILE FILES "/home/jeongje/final_project_ws/host/src/host_pkg/action/Burger.action")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/host_pkg/action" TYPE FILE FILES "/home/jeongje/final_project_ws/host/src/host_pkg/action/Arm.action")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)

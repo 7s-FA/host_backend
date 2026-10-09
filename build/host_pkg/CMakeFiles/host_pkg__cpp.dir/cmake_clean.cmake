@@ -1,6 +1,11 @@
 file(REMOVE_RECURSE
   "CMakeFiles/host_pkg__cpp"
+  "rosidl_generator_cpp/host_pkg/action/arm.hpp"
   "rosidl_generator_cpp/host_pkg/action/burger.hpp"
+  "rosidl_generator_cpp/host_pkg/action/detail/arm__builder.hpp"
+  "rosidl_generator_cpp/host_pkg/action/detail/arm__struct.hpp"
+  "rosidl_generator_cpp/host_pkg/action/detail/arm__traits.hpp"
+  "rosidl_generator_cpp/host_pkg/action/detail/arm__type_support.hpp"
   "rosidl_generator_cpp/host_pkg/action/detail/burger__builder.hpp"
   "rosidl_generator_cpp/host_pkg/action/detail/burger__struct.hpp"
   "rosidl_generator_cpp/host_pkg/action/detail/burger__traits.hpp"
