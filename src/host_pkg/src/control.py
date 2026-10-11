@@ -61,6 +61,9 @@ class RobotController(Node):
 
             self.controlRobot()
 
+            if  self.burger1_state == False and self.burger2_state == False:
+                self.old_start_flag = False
+
         else:
             self.get_logger().info("web에서 동작 버튼을 눌러주세요.")
 
@@ -112,7 +115,7 @@ class RobotController(Node):
                         else:
                             self.get_logger().info("Burger1이 Mat에 도착하지 못했습니다. 재동작 합니다.")
                             self.burger1_step = "PARK"
-                            self.burger1_action == "RESTART"
+                            self.burger1_action = "RESTART"
 
                     elif self.burger1_step == "ASM":
                         if  shared_memory.burger1_success == True and shared_memory.burger1_end_message == "IDLE":
@@ -122,17 +125,17 @@ class RobotController(Node):
                         else:
                             self.get_logger().info("Burger1이 ASM에 도착하지 못했습니다. 재동작 합니다.")
                             self.burger1_step = "MAT"
-                            self.burger1_action == "RESTART"
+                            self.burger1_action = "RESTART"
 
                     elif self.burger1_step == "PARK":
                         if  shared_memory.burger1_success == True and shared_memory.burger1_end_message == "IDLE":
                             self.get_logger().info("Burger1이 Park에 도착했습니다.")
                             self.arm2_sending_to_bot_end_flag = False
-
+                            self.burger1_state = False
                         else:
                             self.get_logger().info("Burger1이 PARK에 도착하지 못했습니다. 재동작 합니다.")
                             self.burger1_step = "ASM"
-                            self.burger1_action == "RESTART"
+                            self.burger1_action = "RESTART"
 
                     else:
                         self.get_logger().info(f"self.burger1_step 오 입력 : {self.burger1_step}")
@@ -150,7 +153,7 @@ class RobotController(Node):
 
         if  self.burger2_state == True:
                 if  self.burger2_step == "PARK" and (self.burger2_action == "STOP" or self.burger2_action == "RESTART") and self.burger1_step == "MAT" and self.burger1_action == "STOP":
-                    self.burger2_sarm1tep = "REST"
+                    self.burger2_step = "REST"
                     self.burger2_action = "OP"
                     
                     self.burger2.send_goal("GO_TO_REST", 100.0)
@@ -165,10 +168,13 @@ class RobotController(Node):
                     self.burger2_step = "ASM"
                     self.burger2_action = "OP"
 
+                    self.burger2.send_goal("GO_TO_ASM", 100.0)
 
                 elif self.burger2_step == "ASM" and (self.burger2_action == "STOP" or self.burger2_action == "RESTART") and self.burger1_step == "PARK" and self.burger1_action == "STOP" and self.arm2_sending_to_bot_end_flag == True:
                     self.burger2_step = "PARK"
                     self.burger2_action = "OP"
+
+                    self.burger2.send_goal("GO_TO_PARK", 100.0)
 
                 else:
                     if  shared_memory.burger2_end_flag == True:
@@ -206,6 +212,7 @@ class RobotController(Node):
                         elif self.burger2_step == "PARK":
                             if  shared_memory.burger2_success == True and shared_memory.burger2_end_message == "IDLE":
                                 self.arm2_sending_to_bot_end_flag = False
+                                self.burger2_state = False
                                 self.get_logger().info("Burger2이 PARK에 도착했습니다.")
 
                             else:
@@ -216,8 +223,6 @@ class RobotController(Node):
                             self.get_logger().info(f"self.burger2_step 오 입력 : {self.burger2_step}")
                     else:
                         self.get_logger().info("Burger2이 동작 중 입니다.")
-
-
         else:
             self.get_logger().info("burger2 동작이 종료되었습니다. 다른 장치의 동작을 기다리고 있습니다.")
 
@@ -226,7 +231,7 @@ class RobotController(Node):
 
     def controlarm1(self):
         if  self.arm1_action == "STOP" and ((self.burger1_step == "MAT" and self.burger1_action == "STOP") or (self.burger2_step == "MAT" and self.burger2_action == "STOP")):
-            self.arm1_action == "OP"
+            self.arm1_action = "OP"
 
             if self.product == PRODUCT_OF_MATERIAL_A:
                 self.arm1.send_goal("SELECT_A")
@@ -251,7 +256,7 @@ class RobotController(Node):
 
     def controlarm2(self):
         if  self.arm2_action == "STOP" and ((self.burger1_step == "ASM" and self.burger1_action == "STOP") or (self.burger2_step == "ASM" and self.burger2_action == "STOP")):
-            self.arm2_action == "OP"
+            self.arm2_action = "OP"
 
             if self.product == PRODUCT_OF_MATERIAL_A:
                 self.arm2.send_goal("BUILD_A")
@@ -266,6 +271,7 @@ class RobotController(Node):
                 if  shared_memory.amr2_success == True and shared_memory.amr2_end_message == "IDLE":
                     self.get_logger().info("Arm2 동작에 성공했습니다.")
                     self.arm2_sending_to_bot_end_flag = True
+                    self.arm2_sending_to_arm_end_flag = True
 
                 else:
                     self.arm2_action = "STOP"
@@ -276,19 +282,19 @@ class RobotController(Node):
     
     def controlarm3(self):
         if  self.arm3_action == "STOP" and self.arm2_sending_to_arm_end_flag == True:
-            self.arm3_action == "OP"
+            self.arm3_action = "OP"
 
             if self.product == PRODUCT_OF_MATERIAL_A:
-                self.arm2.send_goal("LOAD_A")
+                self.arm3.send_goal("LOAD_A")
             else:
-                self.arm2.send_goal("LOAD_B")
+                self.arm3.send_goal("LOAD_B")
 
         else:
             if  shared_memory.arm3_end_flag == True:
                 shared_memory.arm3_end_flag = False
                 self.arm3_action = "STOP"
 
-                if  shared_memory.amr2_success == True and shared_memory.amr2_end_message == "IDLE":
+                if  shared_memory.amr3_success == True and shared_memory.amr3_end_message == "IDLE":
                     self.get_logger().info("Arm3 동작에 성공했습니다.")
                     self.arm3_sending_end_flag = True # waffle에서 써야함
                     self.arm2_sending_to_arm_end_flag = False
