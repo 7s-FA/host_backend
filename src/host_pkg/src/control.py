@@ -13,6 +13,9 @@ class RobotController(Node):
         self.quantity = 0
         self.product = ""
 
+        # Reset
+        self.reset_parked_started = False
+
         # Robot
         self.burger1 = burger1_node
         self.burger2 = burger2_node
@@ -30,7 +33,6 @@ class RobotController(Node):
         self.burger2_action = "STOP"
         # self.waffle_action = "STOP"
         
-
         # Arm
         self.arm1 = arm1_node
         self.arm2 = arm2_node
@@ -45,10 +47,14 @@ class RobotController(Node):
         self.arm2_sending_to_arm_end_flag = False
         self.arm3_sending_end_flag = False # waffle에서 써야함
 
+        
+
         self.timer = self.create_timer(1.0, self.startRobot) # print 문 빼고 나중에 0.1초로 바꾸자
         self.get_logger().info('RobotController 노드가 시작되었습니다.')
 
     def startRobot(self):
+        
+
         if  shared_memory.start_flag == True or self.old_start_flag == True:
             if  self.old_start_flag == True:
                 self.get_logger().info("Control Flow가 실행 중입니다.")
@@ -67,6 +73,7 @@ class RobotController(Node):
         else:
             self.get_logger().info("web에서 동작 버튼을 눌러주세요.")
 
+
     def controlRobot(self):
         self.controlburger1()
         self.controlburger2()
@@ -81,6 +88,7 @@ class RobotController(Node):
         if  self.quantity > 0:
             self.quantity -= 1
             self.burger1_state = True
+
 
         if  self.burger1_state == True:
             if  self.burger1_step == "PARK" and (self.burger1_action == "STOP" or self.burger1_action == "RESTART") and self.burger2_action == "STOP":
