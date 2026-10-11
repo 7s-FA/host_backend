@@ -103,6 +103,7 @@ class RobotController(Node):
                 time.sleep(0.01)
 
             shared_memory.arm1_end_flag = False
+            # test
             if  shared_memory.arm1_success == True and shared_memory.arm1_end_message == "IDLE":
                 self.burger1.send_goal("GO_TO_ASM", 100.0)
 
