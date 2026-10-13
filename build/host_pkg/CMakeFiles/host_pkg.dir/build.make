@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jeongje/final_project_ws/host/src/host_pkg
+CMAKE_SOURCE_DIR = /home/ryu/final_project_host/host_backend/src/host_pkg
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jeongje/final_project_ws/host/build/host_pkg
+CMAKE_BINARY_DIR = /home/ryu/final_project_host/host_backend/build/host_pkg
 
 # Utility rule file for host_pkg.
 
@@ -66,8 +66,8 @@ include CMakeFiles/host_pkg.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/host_pkg.dir/progress.make
 
-CMakeFiles/host_pkg: /home/jeongje/final_project_ws/host/src/host_pkg/action/Burger.action
-CMakeFiles/host_pkg: /home/jeongje/final_project_ws/host/src/host_pkg/action/Arm.action
+CMakeFiles/host_pkg: /home/ryu/final_project_host/host_backend/src/host_pkg/action/Burger.action
+CMakeFiles/host_pkg: /home/ryu/final_project_host/host_backend/src/host_pkg/action/Arm.action
 CMakeFiles/host_pkg: /opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl
 CMakeFiles/host_pkg: /opt/ros/jazzy/share/action_msgs/msg/GoalInfo.idl
 CMakeFiles/host_pkg: /opt/ros/jazzy/share/action_msgs/msg/GoalStatus.idl
@@ -87,6 +87,6 @@ CMakeFiles/host_pkg.dir/clean:
 .PHONY : CMakeFiles/host_pkg.dir/clean
 
 CMakeFiles/host_pkg.dir/depend:
-	cd /home/jeongje/final_project_ws/host/build/host_pkg && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jeongje/final_project_ws/host/src/host_pkg /home/jeongje/final_project_ws/host/src/host_pkg /home/jeongje/final_project_ws/host/build/host_pkg /home/jeongje/final_project_ws/host/build/host_pkg /home/jeongje/final_project_ws/host/build/host_pkg/CMakeFiles/host_pkg.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/ryu/final_project_host/host_backend/build/host_pkg && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ryu/final_project_host/host_backend/src/host_pkg /home/ryu/final_project_host/host_backend/src/host_pkg /home/ryu/final_project_host/host_backend/build/host_pkg /home/ryu/final_project_host/host_backend/build/host_pkg /home/ryu/final_project_host/host_backend/build/host_pkg/CMakeFiles/host_pkg.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/host_pkg.dir/depend
 

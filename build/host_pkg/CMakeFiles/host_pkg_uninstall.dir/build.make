@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jeongje/final_project_ws/host/src/host_pkg
+CMAKE_SOURCE_DIR = /home/ryu/final_project_host/host_backend/src/host_pkg
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jeongje/final_project_ws/host/build/host_pkg
+CMAKE_BINARY_DIR = /home/ryu/final_project_host/host_backend/build/host_pkg
 
 # Utility rule file for host_pkg_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/host_pkg_uninstall.dir/compiler_depend.make
 include CMakeFiles/host_pkg_uninstall.dir/progress.make
 
 CMakeFiles/host_pkg_uninstall:
-	/usr/bin/cmake -P /home/jeongje/final_project_ws/host/build/host_pkg/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/ryu/final_project_host/host_backend/build/host_pkg/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 host_pkg_uninstall: CMakeFiles/host_pkg_uninstall
 host_pkg_uninstall: CMakeFiles/host_pkg_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/host_pkg_uninstall.dir/clean:
 .PHONY : CMakeFiles/host_pkg_uninstall.dir/clean
 
 CMakeFiles/host_pkg_uninstall.dir/depend:
-	cd /home/jeongje/final_project_ws/host/build/host_pkg && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jeongje/final_project_ws/host/src/host_pkg /home/jeongje/final_project_ws/host/src/host_pkg /home/jeongje/final_project_ws/host/build/host_pkg /home/jeongje/final_project_ws/host/build/host_pkg /home/jeongje/final_project_ws/host/build/host_pkg/CMakeFiles/host_pkg_uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/ryu/final_project_host/host_backend/build/host_pkg && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ryu/final_project_host/host_backend/src/host_pkg /home/ryu/final_project_host/host_backend/src/host_pkg /home/ryu/final_project_host/host_backend/build/host_pkg /home/ryu/final_project_host/host_backend/build/host_pkg /home/ryu/final_project_host/host_backend/build/host_pkg/CMakeFiles/host_pkg_uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/host_pkg_uninstall.dir/depend
 

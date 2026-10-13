@@ -4,6 +4,3 @@ host_pkg.egg-info/PKG-INFO
 host_pkg.egg-info/SOURCES.txt
 host_pkg.egg-info/dependency_links.txt
 host_pkg.egg-info/top_level.txt
-host_pkg/action/__init__.py
-host_pkg/action/_arm.py
-host_pkg/action/_burger.py

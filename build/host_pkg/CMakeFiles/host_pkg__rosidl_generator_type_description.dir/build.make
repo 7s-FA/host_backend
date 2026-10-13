@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jeongje/final_project_ws/host/src/host_pkg
+CMAKE_SOURCE_DIR = /home/ryu/final_project_host/host_backend/src/host_pkg
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jeongje/final_project_ws/host/build/host_pkg
+CMAKE_BINARY_DIR = /home/ryu/final_project_host/host_backend/build/host_pkg
 
 # Utility rule file for host_pkg__rosidl_generator_type_description.
 
@@ -73,8 +73,8 @@ rosidl_generator_type_description/host_pkg/action/Burger.json: /opt/ros/jazzy/li
 rosidl_generator_type_description/host_pkg/action/Burger.json: /opt/ros/jazzy/lib/python3.12/site-packages/rosidl_generator_type_description/__init__.py
 rosidl_generator_type_description/host_pkg/action/Burger.json: rosidl_adapter/host_pkg/action/Burger.idl
 rosidl_generator_type_description/host_pkg/action/Burger.json: rosidl_adapter/host_pkg/action/Arm.idl
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/jeongje/final_project_ws/host/build/host_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating type hashes for ROS interfaces"
-	/usr/bin/python3 /opt/ros/jazzy/lib/rosidl_generator_type_description/rosidl_generator_type_description --generator-arguments-file /home/jeongje/final_project_ws/host/build/host_pkg/rosidl_generator_type_description__arguments.json
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/ryu/final_project_host/host_backend/build/host_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating type hashes for ROS interfaces"
+	/usr/bin/python3 /opt/ros/jazzy/lib/rosidl_generator_type_description/rosidl_generator_type_description --generator-arguments-file /home/ryu/final_project_host/host_backend/build/host_pkg/rosidl_generator_type_description__arguments.json
 
 rosidl_generator_type_description/host_pkg/action/Arm.json: rosidl_generator_type_description/host_pkg/action/Burger.json
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_type_description/host_pkg/action/Arm.json
@@ -94,6 +94,6 @@ CMakeFiles/host_pkg__rosidl_generator_type_description.dir/clean:
 .PHONY : CMakeFiles/host_pkg__rosidl_generator_type_description.dir/clean
 
 CMakeFiles/host_pkg__rosidl_generator_type_description.dir/depend:
-	cd /home/jeongje/final_project_ws/host/build/host_pkg && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jeongje/final_project_ws/host/src/host_pkg /home/jeongje/final_project_ws/host/src/host_pkg /home/jeongje/final_project_ws/host/build/host_pkg /home/jeongje/final_project_ws/host/build/host_pkg /home/jeongje/final_project_ws/host/build/host_pkg/CMakeFiles/host_pkg__rosidl_generator_type_description.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/ryu/final_project_host/host_backend/build/host_pkg && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ryu/final_project_host/host_backend/src/host_pkg /home/ryu/final_project_host/host_backend/src/host_pkg /home/ryu/final_project_host/host_backend/build/host_pkg /home/ryu/final_project_host/host_backend/build/host_pkg /home/ryu/final_project_host/host_backend/build/host_pkg/CMakeFiles/host_pkg__rosidl_generator_type_description.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/host_pkg__rosidl_generator_type_description.dir/depend
 

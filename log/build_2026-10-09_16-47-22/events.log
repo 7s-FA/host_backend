@@ -1,0 +1,490 @@
+[0.000000] (-) TimerEvent: {}
+[0.003741] (host_pkg) JobQueued: {'identifier': 'host_pkg', 'dependencies': OrderedDict()}
+[0.003778] (host_pkg) JobStarted: {'identifier': 'host_pkg'}
+[0.008938] (host_pkg) JobProgress: {'identifier': 'host_pkg', 'progress': 'cmake'}
+[0.009341] (host_pkg) Command: {'cmd': ['/usr/bin/cmake', '/home/ryu/final_project_host/host_backend/src/host_pkg', '-DCMAKE_INSTALL_PREFIX=/home/ryu/final_project_host/host_backend/install/host_pkg'], 'cwd': '/home/ryu/final_project_host/host_backend/build/host_pkg', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'USER': 'ryu', 'SSH_CLIENT': '10.10.142.218 37092 22', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/ryu/final_project_host/host_backend/install/host_pkg/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/ryu', 'OLDPWD': '/home/ryu/final_project_host/host_backend', 'SSH_TTY': '/dev/pts/4', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/ryu/final_project_host/host_backend/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'ryu', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '12', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/home/ryu/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'ROS_DOMAIN_ID': '40', 'AMENT_PREFIX_PATH': '/home/ryu/final_project_host/host_backend/install/host_pkg:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/ryu/final_project_host/host_backend/build/host_pkg', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '10.10.142.218 37092 10.10.142.120 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/home/ryu/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ryu/final_project_host/host_backend/install/host_pkg/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/ryu/final_project_host/host_backend/install/host_pkg:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.100013] (-) TimerEvent: {}
+[0.184223] (host_pkg) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[0.200492] (-) TimerEvent: {}
+[0.300479] (host_pkg) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[0.300650] (-) TimerEvent: {}
+[0.328492] (host_pkg) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.400818] (-) TimerEvent: {}
+[0.435641] (host_pkg) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.443993] (host_pkg) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.444415] (host_pkg) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.444915] (host_pkg) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.456389] (host_pkg) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.501118] (-) TimerEvent: {}
+[0.558047] (host_pkg) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.567085] (host_pkg) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.567421] (host_pkg) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.567973] (host_pkg) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.571802] (host_pkg) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[0.601340] (-) TimerEvent: {}
+[0.701620] (-) TimerEvent: {}
+[0.718142] (host_pkg) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[0.801712] (-) TimerEvent: {}
+[0.858754] (host_pkg) StdoutLine: {'line': b'-- Found rclcpp: 28.1.21 (/opt/ros/jazzy/share/rclcpp/cmake)\n'}
+[0.901884] (-) TimerEvent: {}
+[0.929182] (host_pkg) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[0.955721] (host_pkg) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[0.987846] (host_pkg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.002017] (-) TimerEvent: {}
+[1.016912] (host_pkg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.102219] (-) TimerEvent: {}
+[1.139150] (host_pkg) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[1.144296] (host_pkg) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.202356] (-) TimerEvent: {}
+[1.246448] (host_pkg) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  \n'}
+[1.270890] (host_pkg) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") \n'}
+[1.296083] (host_pkg) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.302432] (-) TimerEvent: {}
+[1.402884] (-) TimerEvent: {}
+[1.418443] (host_pkg) StdoutLine: {'line': b'-- Found rclpy: 7.1.11 (/opt/ros/jazzy/share/rclpy/cmake)\n'}
+[1.421713] (host_pkg) StdoutLine: {'line': b'-- Found rclcpp_action: 28.1.21 (/opt/ros/jazzy/share/rclcpp_action/cmake)\n'}
+[1.481694] (host_pkg) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.6.1 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)\n'}
+[1.503186] (-) TimerEvent: {}
+[1.511530] (host_pkg) StdoutLine: {'line': b'-- Found rosidl_adapter: 4.6.9 (/opt/ros/jazzy/share/rosidl_adapter/cmake)\n'}
+[1.519092] (host_pkg) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)\n'}
+[1.603322] (-) TimerEvent: {}
+[1.703662] (-) TimerEvent: {}
+[1.803963] (-) TimerEvent: {}
+[1.904378] (-) TimerEvent: {}
+[2.004809] (-) TimerEvent: {}
+[2.105220] (-) TimerEvent: {}
+[2.109217] (host_pkg) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.12.1 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)\n'}
+[2.205417] (-) TimerEvent: {}
+[2.305758] (-) TimerEvent: {}
+[2.405977] (-) TimerEvent: {}
+[2.507293] (-) TimerEvent: {}
+[2.607539] (-) TimerEvent: {}
+[2.707962] (-) TimerEvent: {}
+[2.795087] (host_pkg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.808070] (-) TimerEvent: {}
+[2.908268] (-) TimerEvent: {}
+[3.008712] (-) TimerEvent: {}
+[3.066813] (host_pkg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[3.078229] (host_pkg) StdoutLine: {'line': b'-- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)\n'}
+[3.108926] (-) TimerEvent: {}
+[3.199945] (host_pkg) StdoutLine: {'line': b'-- Found PythonExtra: /usr/bin/python3  \n'}
+[3.209017] (-) TimerEvent: {}
+[3.309295] (-) TimerEvent: {}
+[3.409511] (-) TimerEvent: {}
+[3.509840] (-) TimerEvent: {}
+[3.590514] (host_pkg) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed \n'}
+[3.609920] (-) TimerEvent: {}
+[3.658474] (host_pkg) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[3.671924] (host_pkg) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[3.672598] (host_pkg) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[3.672739] (host_pkg) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[3.675199] (host_pkg) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[3.675340] (host_pkg) StdoutLine: {'line': b"-- Configured 'flake8' exclude dirs and/or files: \n"}
+[3.676471] (host_pkg) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[3.677957] (host_pkg) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[3.682737] (host_pkg) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[3.682894] (host_pkg) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[3.685676] (host_pkg) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[3.696335] (host_pkg) StdoutLine: {'line': b'-- Configuring done (3.7s)\n'}
+[3.710238] (-) TimerEvent: {}
+[3.732607] (host_pkg) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[3.745681] (host_pkg) StdoutLine: {'line': b'-- Build files have been written to: /home/ryu/final_project_host/host_backend/build/host_pkg\n'}
+[3.758948] (host_pkg) CommandEnded: {'returncode': 0}
+[3.759434] (host_pkg) JobProgress: {'identifier': 'host_pkg', 'progress': 'build'}
+[3.759964] (host_pkg) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ryu/final_project_host/host_backend/build/host_pkg', '--', '-j16', '-l16'], 'cwd': '/home/ryu/final_project_host/host_backend/build/host_pkg', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'USER': 'ryu', 'SSH_CLIENT': '10.10.142.218 37092 22', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/ryu/final_project_host/host_backend/install/host_pkg/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/ryu', 'OLDPWD': '/home/ryu/final_project_host/host_backend', 'SSH_TTY': '/dev/pts/4', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/ryu/final_project_host/host_backend/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'ryu', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '12', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/home/ryu/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'ROS_DOMAIN_ID': '40', 'AMENT_PREFIX_PATH': '/home/ryu/final_project_host/host_backend/install/host_pkg:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/ryu/final_project_host/host_backend/build/host_pkg', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '10.10.142.218 37092 10.10.142.120 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/home/ryu/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ryu/final_project_host/host_backend/install/host_pkg/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/ryu/final_project_host/host_backend/install/host_pkg:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[3.806400] (host_pkg) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating Rust code for ROS interfaces\x1b[0m\n'}
+[3.810405] (-) TimerEvent: {}
+[3.910752] (-) TimerEvent: {}
+[4.011245] (-) TimerEvent: {}
+[4.094823] (host_pkg) StdoutLine: {'line': b'[  2%] Built target host_pkg__rs\n'}
+[4.111423] (-) TimerEvent: {}
+[4.117987] (host_pkg) StdoutLine: {'line': b'[  2%] Built target ament_cmake_python_copy_host_pkg\n'}
+[4.134361] (host_pkg) StdoutLine: {'line': b'[  4%] \x1b[34m\x1b[1mGenerating type hashes for ROS interfaces\x1b[0m\n'}
+[4.211575] (-) TimerEvent: {}
+[4.312152] (-) TimerEvent: {}
+[4.360037] (host_pkg) StdoutLine: {'line': b'[  4%] Built target host_pkg__rosidl_generator_type_description\n'}
+[4.412320] (-) TimerEvent: {}
+[4.512623] (-) TimerEvent: {}
+[4.588669] (host_pkg) StdoutLine: {'line': b'running egg_info\n'}
+[4.589418] (host_pkg) StdoutLine: {'line': b'creating host_pkg.egg-info\n'}
+[4.612378] (host_pkg) StdoutLine: {'line': b'writing host_pkg.egg-info/PKG-INFO\n'}
+[4.612519] (host_pkg) StdoutLine: {'line': b'writing dependency_links to host_pkg.egg-info/dependency_links.txt\n'}
+[4.612596] (host_pkg) StdoutLine: {'line': b'writing top-level names to host_pkg.egg-info/top_level.txt\n'}
+[4.612677] (-) TimerEvent: {}
+[4.612805] (host_pkg) StdoutLine: {'line': b"writing manifest file 'host_pkg.egg-info/SOURCES.txt'\n"}
+[4.682848] (host_pkg) StdoutLine: {'line': b"reading manifest file 'host_pkg.egg-info/SOURCES.txt'\n"}
+[4.683262] (host_pkg) StdoutLine: {'line': b"writing manifest file 'host_pkg.egg-info/SOURCES.txt'\n"}
+[4.705472] (host_pkg) StdoutLine: {'line': b'[  4%] Built target ament_cmake_python_build_host_pkg_egg\n'}
+[4.712953] (-) TimerEvent: {}
+[4.722427] (host_pkg) StdoutLine: {'line': b'[  6%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[4.813229] (-) TimerEvent: {}
+[4.913644] (-) TimerEvent: {}
+[5.014115] (-) TimerEvent: {}
+[5.114386] (-) TimerEvent: {}
+[5.214636] (-) TimerEvent: {}
+[5.314954] (-) TimerEvent: {}
+[5.415267] (-) TimerEvent: {}
+[5.416537] (host_pkg) StdoutLine: {'line': b'[  6%] Built target host_pkg__cpp\n'}
+[5.424977] (host_pkg) StdoutLine: {'line': b'[  8%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[5.515350] (-) TimerEvent: {}
+[5.615674] (-) TimerEvent: {}
+[5.715957] (-) TimerEvent: {}
+[5.816211] (-) TimerEvent: {}
+[5.916421] (-) TimerEvent: {}
+[6.016840] (-) TimerEvent: {}
+[6.117271] (-) TimerEvent: {}
+[6.217699] (-) TimerEvent: {}
+[6.228498] (host_pkg) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/burger__description.c.o\x1b[0m\n'}
+[6.318031] (-) TimerEvent: {}
+[6.324686] (host_pkg) StdoutLine: {'line': b'[ 13%] \x1b[32mBuilding C object CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/arm__type_support.c.o\x1b[0m\n'}
+[6.363855] (host_pkg) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding C object CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/arm__functions.c.o\x1b[0m\n'}
+[6.418420] (-) TimerEvent: {}
+[6.518657] (-) TimerEvent: {}
+[6.522931] (host_pkg) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding C object CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/arm__description.c.o\x1b[0m\n'}
+[6.594938] (host_pkg) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding C object CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/burger__type_support.c.o\x1b[0m\n'}
+[6.618916] (-) TimerEvent: {}
+[6.630445] (host_pkg) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding C object CMakeFiles/host_pkg__rosidl_generator_c.dir/rosidl_generator_c/host_pkg/action/detail/burger__functions.c.o\x1b[0m\n'}
+[6.719052] (-) TimerEvent: {}
+[6.774478] (host_pkg) StdoutLine: {'line': b'[ 24%] \x1b[32m\x1b[1mLinking C shared library libhost_pkg__rosidl_generator_c.so\x1b[0m\n'}
+[6.810990] (host_pkg) StdoutLine: {'line': b'[ 24%] Built target host_pkg__rosidl_generator_c\n'}
+[6.819321] (-) TimerEvent: {}
+[6.819463] (host_pkg) StdoutLine: {'line': b'[ 26%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[6.919417] (-) TimerEvent: {}
+[7.019653] (-) TimerEvent: {}
+[7.120072] (-) TimerEvent: {}
+[7.220368] (-) TimerEvent: {}
+[7.320646] (-) TimerEvent: {}
+[7.421126] (-) TimerEvent: {}
+[7.521412] (-) TimerEvent: {}
+[7.621912] (-) TimerEvent: {}
+[7.625323] (host_pkg) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object CMakeFiles/host_pkg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/host_pkg/action/detail/burger__type_support_c.cpp.o\x1b[0m\n'}
+[7.722164] (-) TimerEvent: {}
+[7.822500] (-) TimerEvent: {}
+[7.922832] (-) TimerEvent: {}
+[8.023168] (-) TimerEvent: {}
+[8.123467] (-) TimerEvent: {}
+[8.223991] (-) TimerEvent: {}
+[8.238468] (host_pkg) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object CMakeFiles/host_pkg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/host_pkg/action/detail/arm__type_support_c.cpp.o\x1b[0m\n'}
+[8.324185] (-) TimerEvent: {}
+[8.424495] (-) TimerEvent: {}
+[8.524885] (-) TimerEvent: {}
+[8.625430] (-) TimerEvent: {}
+[8.725988] (-) TimerEvent: {}
+[8.740201] (host_pkg) StdoutLine: {'line': b'[ 33%] \x1b[32m\x1b[1mLinking CXX shared library libhost_pkg__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[8.807821] (host_pkg) StdoutLine: {'line': b'[ 33%] Built target host_pkg__rosidl_typesupport_fastrtps_c\n'}
+[8.821999] (host_pkg) StdoutLine: {'line': b'[ 35%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[8.826104] (-) TimerEvent: {}
+[8.926417] (-) TimerEvent: {}
+[9.026757] (-) TimerEvent: {}
+[9.127168] (-) TimerEvent: {}
+[9.190752] (host_pkg) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding CXX object CMakeFiles/host_pkg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/host_pkg/action/burger__type_support.cpp.o\x1b[0m\n'}
+[9.227316] (-) TimerEvent: {}
+[9.327664] (-) TimerEvent: {}
+[9.427981] (-) TimerEvent: {}
+[9.528331] (-) TimerEvent: {}
+[9.628639] (-) TimerEvent: {}
+[9.728934] (-) TimerEvent: {}
+[9.826556] (host_pkg) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/host_pkg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/host_pkg/action/arm__type_support.cpp.o\x1b[0m\n'}
+[9.829108] (-) TimerEvent: {}
+[9.929423] (-) TimerEvent: {}
+[10.029817] (-) TimerEvent: {}
+[10.130089] (-) TimerEvent: {}
+[10.230430] (-) TimerEvent: {}
+[10.330720] (-) TimerEvent: {}
+[10.404046] (host_pkg) StdoutLine: {'line': b'[ 42%] \x1b[32m\x1b[1mLinking CXX shared library libhost_pkg__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[10.430834] (-) TimerEvent: {}
+[10.473304] (host_pkg) StdoutLine: {'line': b'[ 42%] Built target host_pkg__rosidl_typesupport_cpp\n'}
+[10.483796] (host_pkg) StdoutLine: {'line': b'[ 44%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[10.530952] (-) TimerEvent: {}
+[10.631210] (-) TimerEvent: {}
+[10.731417] (-) TimerEvent: {}
+[10.831651] (-) TimerEvent: {}
+[10.931854] (-) TimerEvent: {}
+[10.956396] (host_pkg) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding CXX object CMakeFiles/host_pkg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/host_pkg/action/detail/burger__type_support.cpp.o\x1b[0m\n'}
+[11.032139] (-) TimerEvent: {}
+[11.132361] (-) TimerEvent: {}
+[11.232836] (-) TimerEvent: {}
+[11.333145] (-) TimerEvent: {}
+[11.433430] (-) TimerEvent: {}
+[11.533744] (-) TimerEvent: {}
+[11.593602] (host_pkg) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding CXX object CMakeFiles/host_pkg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/host_pkg/action/detail/arm__type_support.cpp.o\x1b[0m\n'}
+[11.633837] (-) TimerEvent: {}
+[11.734063] (-) TimerEvent: {}
+[11.834433] (-) TimerEvent: {}
+[11.935437] (-) TimerEvent: {}
+[12.035674] (-) TimerEvent: {}
+[12.135910] (-) TimerEvent: {}
+[12.224124] (host_pkg) StdoutLine: {'line': b'[ 51%] \x1b[32m\x1b[1mLinking CXX shared library libhost_pkg__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[12.236082] (-) TimerEvent: {}
+[12.295362] (host_pkg) StdoutLine: {'line': b'[ 51%] Built target host_pkg__rosidl_typesupport_introspection_cpp\n'}
+[12.303903] (host_pkg) StdoutLine: {'line': b'[ 53%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[12.336334] (-) TimerEvent: {}
+[12.436542] (-) TimerEvent: {}
+[12.536928] (-) TimerEvent: {}
+[12.637237] (-) TimerEvent: {}
+[12.661295] (host_pkg) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding CXX object CMakeFiles/host_pkg__rosidl_typesupport_c.dir/rosidl_typesupport_c/host_pkg/action/burger__type_support.cpp.o\x1b[0m\n'}
+[12.727253] (host_pkg) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding CXX object CMakeFiles/host_pkg__rosidl_typesupport_c.dir/rosidl_typesupport_c/host_pkg/action/arm__type_support.cpp.o\x1b[0m\n'}
+[12.737413] (-) TimerEvent: {}
+[12.774367] (host_pkg) StdoutLine: {'line': b'[ 60%] \x1b[32m\x1b[1mLinking CXX shared library libhost_pkg__rosidl_typesupport_c.so\x1b[0m\n'}
+[12.811756] (host_pkg) StdoutLine: {'line': b'[ 60%] Built target host_pkg__rosidl_typesupport_c\n'}
+[12.820107] (host_pkg) StdoutLine: {'line': b'[ 62%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[12.837498] (-) TimerEvent: {}
+[12.937748] (-) TimerEvent: {}
+[13.037990] (-) TimerEvent: {}
+[13.138361] (-) TimerEvent: {}
+[13.238605] (-) TimerEvent: {}
+[13.328146] (host_pkg) StdoutLine: {'line': b'[ 64%] \x1b[32mBuilding C object CMakeFiles/host_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/host_pkg/action/detail/burger__type_support.c.o\x1b[0m\n'}
+[13.338936] (-) TimerEvent: {}
+[13.399223] (host_pkg) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding C object CMakeFiles/host_pkg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/host_pkg/action/detail/arm__type_support.c.o\x1b[0m\n'}
+[13.439238] (-) TimerEvent: {}
+[13.456299] (host_pkg) StdoutLine: {'line': b'[ 68%] \x1b[32m\x1b[1mLinking C shared library libhost_pkg__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[13.490004] (host_pkg) StdoutLine: {'line': b'[ 68%] Built target host_pkg__rosidl_typesupport_introspection_c\n'}
+[13.499136] (host_pkg) StdoutLine: {'line': b'[ 71%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[13.539321] (-) TimerEvent: {}
+[13.639908] (-) TimerEvent: {}
+[13.740349] (-) TimerEvent: {}
+[13.841675] (-) TimerEvent: {}
+[13.941997] (-) TimerEvent: {}
+[14.042412] (-) TimerEvent: {}
+[14.142635] (-) TimerEvent: {}
+[14.226587] (host_pkg) StdoutLine: {'line': b'[ 73%] \x1b[32mBuilding CXX object CMakeFiles/host_pkg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/host_pkg/action/detail/dds_fastrtps/burger__type_support.cpp.o\x1b[0m\n'}
+[14.242738] (-) TimerEvent: {}
+[14.342950] (-) TimerEvent: {}
+[14.443184] (-) TimerEvent: {}
+[14.543428] (-) TimerEvent: {}
+[14.643740] (-) TimerEvent: {}
+[14.743981] (-) TimerEvent: {}
+[14.844428] (-) TimerEvent: {}
+[14.944801] (-) TimerEvent: {}
+[15.045130] (-) TimerEvent: {}
+[15.098427] (host_pkg) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/host_pkg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/host_pkg/action/detail/dds_fastrtps/arm__type_support.cpp.o\x1b[0m\n'}
+[15.145409] (-) TimerEvent: {}
+[15.245934] (-) TimerEvent: {}
+[15.346430] (-) TimerEvent: {}
+[15.446808] (-) TimerEvent: {}
+[15.547190] (-) TimerEvent: {}
+[15.647429] (-) TimerEvent: {}
+[15.747818] (-) TimerEvent: {}
+[15.848170] (-) TimerEvent: {}
+[15.938541] (host_pkg) StdoutLine: {'line': b'[ 77%] \x1b[32m\x1b[1mLinking CXX shared library libhost_pkg__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[15.948412] (-) TimerEvent: {}
+[16.009895] (host_pkg) StdoutLine: {'line': b'[ 77%] Built target host_pkg__rosidl_typesupport_fastrtps_cpp\n'}
+[16.026777] (host_pkg) StdoutLine: {'line': b'[ 77%] Built target host_pkg\n'}
+[16.043540] (host_pkg) StdoutLine: {'line': b'[ 80%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[16.048683] (-) TimerEvent: {}
+[16.148972] (-) TimerEvent: {}
+[16.249407] (-) TimerEvent: {}
+[16.349650] (-) TimerEvent: {}
+[16.449919] (-) TimerEvent: {}
+[16.550359] (-) TimerEvent: {}
+[16.650644] (-) TimerEvent: {}
+[16.750916] (-) TimerEvent: {}
+[16.851199] (-) TimerEvent: {}
+[16.951545] (-) TimerEvent: {}
+[17.051784] (-) TimerEvent: {}
+[17.152204] (-) TimerEvent: {}
+[17.187866] (host_pkg) StdoutLine: {'line': b'[ 80%] Built target host_pkg__py\n'}
+[17.204955] (host_pkg) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding C object CMakeFiles/host_pkg__rosidl_generator_py.dir/rosidl_generator_py/host_pkg/action/_burger_s.c.o\x1b[0m\n'}
+[17.252423] (-) TimerEvent: {}
+[17.352837] (-) TimerEvent: {}
+[17.450519] (host_pkg) StdoutLine: {'line': b'[ 84%] \x1b[32mBuilding C object CMakeFiles/host_pkg__rosidl_generator_py.dir/rosidl_generator_py/host_pkg/action/_arm_s.c.o\x1b[0m\n'}
+[17.453054] (-) TimerEvent: {}
+[17.553278] (-) TimerEvent: {}
+[17.629302] (host_pkg) StdoutLine: {'line': b'[ 86%] \x1b[32m\x1b[1mLinking C shared library libhost_pkg__rosidl_generator_py.so\x1b[0m\n'}
+[17.653429] (-) TimerEvent: {}
+[17.669380] (host_pkg) StdoutLine: {'line': b'[ 86%] Built target host_pkg__rosidl_generator_py\n'}
+[17.687072] (host_pkg) StdoutLine: {'line': b'[ 88%] \x1b[32mBuilding C object CMakeFiles/host_pkg_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/host_pkg/_host_pkg_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[17.753634] (-) TimerEvent: {}
+[17.834539] (host_pkg) StdoutLine: {'line': b'[ 91%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/host_pkg/host_pkg_s__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[17.854433] (-) TimerEvent: {}
+[17.865370] (host_pkg) StdoutLine: {'line': b'[ 91%] Built target host_pkg_s__rosidl_typesupport_fastrtps_c\n'}
+[17.890020] (host_pkg) StdoutLine: {'line': b'[ 93%] \x1b[32mBuilding C object CMakeFiles/host_pkg_s__rosidl_typesupport_c.dir/rosidl_generator_py/host_pkg/_host_pkg_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[17.954751] (-) TimerEvent: {}
+[18.041591] (host_pkg) StdoutLine: {'line': b'[ 95%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/host_pkg/host_pkg_s__rosidl_typesupport_c.so\x1b[0m\n'}
+[18.054830] (-) TimerEvent: {}
+[18.075260] (host_pkg) StdoutLine: {'line': b'[ 95%] Built target host_pkg_s__rosidl_typesupport_c\n'}
+[18.094561] (host_pkg) StdoutLine: {'line': b'[ 97%] \x1b[32mBuilding C object CMakeFiles/host_pkg_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/host_pkg/_host_pkg_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[18.154992] (-) TimerEvent: {}
+[18.249078] (host_pkg) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/host_pkg/host_pkg_s__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[18.255067] (-) TimerEvent: {}
+[18.283949] (host_pkg) StdoutLine: {'line': b'[100%] Built target host_pkg_s__rosidl_typesupport_introspection_c\n'}
+[18.296703] (host_pkg) CommandEnded: {'returncode': 0}
+[18.296959] (host_pkg) JobProgress: {'identifier': 'host_pkg', 'progress': 'install'}
+[18.306257] (host_pkg) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/ryu/final_project_host/host_backend/build/host_pkg'], 'cwd': '/home/ryu/final_project_host/host_backend/build/host_pkg', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'USER': 'ryu', 'SSH_CLIENT': '10.10.142.218 37092 22', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/ryu/final_project_host/host_backend/install/host_pkg/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/ryu', 'OLDPWD': '/home/ryu/final_project_host/host_backend', 'SSH_TTY': '/dev/pts/4', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/ryu/final_project_host/host_backend/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'ryu', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '12', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/home/ryu/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'ROS_DOMAIN_ID': '40', 'AMENT_PREFIX_PATH': '/home/ryu/final_project_host/host_backend/install/host_pkg:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/ryu/final_project_host/host_backend/build/host_pkg', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '10.10.142.218 37092 10.10.142.120 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/home/ryu/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ryu/final_project_host/host_backend/install/host_pkg/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/ryu/final_project_host/host_backend/install/host_pkg:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[18.313900] (host_pkg) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[18.314012] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/ament_index/resource_index/rosidl_interfaces/host_pkg\n'}
+[18.314257] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/action/Burger.json\n'}
+[18.314333] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/action/Arm.json\n'}
+[18.314576] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg\n'}
+[18.314652] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/action\n'}
+[18.314715] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/action/detail\n'}
+[18.314778] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/action/detail/burger__type_support.h\n'}
+[18.314850] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/action/detail/arm__type_support.c\n'}
+[18.315080] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/action/detail/arm__description.c\n'}
+[18.315148] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/action/detail/arm__functions.c\n'}
+[18.315214] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/action/detail/burger__type_support.c\n'}
+[18.315284] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/action/detail/burger__functions.c\n'}
+[18.315507] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/action/detail/burger__functions.h\n'}
+[18.315582] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/action/detail/burger__struct.h\n'}
+[18.315650] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/action/detail/burger__description.c\n'}
+[18.315716] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/action/detail/arm__type_support.h\n'}
+[18.316072] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/action/detail/arm__functions.h\n'}
+[18.316147] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/action/detail/arm__struct.h\n'}
+[18.316217] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/action/arm.h\n'}
+[18.316281] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/action/burger.h\n'}
+[18.316353] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/msg\n'}
+[18.316425] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/msg/rosidl_generator_c__visibility_control.h\n'}
+[18.316490] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/environment/library_path.sh\n'}
+[18.316705] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/environment/library_path.dsv\n'}
+[18.316779] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/lib/libhost_pkg__rosidl_generator_c.so\n'}
+[18.316847] (host_pkg) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/ryu/final_project_host/host_backend/install/host_pkg/lib/libhost_pkg__rosidl_generator_c.so" to ""\n'}
+[18.316912] (host_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg\n'}
+[18.317110] (host_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/action\n'}
+[18.317188] (host_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/action/detail\n'}
+[18.317249] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/action/detail/arm__rosidl_typesupport_fastrtps_c.h\n'}
+[18.317314] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/action/detail/burger__rosidl_typesupport_fastrtps_c.h\n'}
+[18.317400] (host_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/msg\n'}
+[18.317459] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[18.317526] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/lib/libhost_pkg__rosidl_typesupport_fastrtps_c.so\n'}
+[18.317726] (host_pkg) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/ryu/final_project_host/host_backend/install/host_pkg/lib/libhost_pkg__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[18.317799] (host_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg\n'}
+[18.317864] (host_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/action\n'}
+[18.317928] (host_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/action/detail\n'}
+[18.317994] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/action/detail/arm__struct.hpp\n'}
+[18.318062] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/action/detail/arm__traits.hpp\n'}
+[18.318359] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/action/detail/burger__struct.hpp\n'}
+[18.318442] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/action/detail/burger__type_support.hpp\n'}
+[18.318508] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/action/detail/burger__traits.hpp\n'}
+[18.318789] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/action/detail/arm__type_support.hpp\n'}
+[18.318862] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/action/detail/arm__builder.hpp\n'}
+[18.318929] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/action/detail/burger__builder.hpp\n'}
+[18.318993] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/action/arm.hpp\n'}
+[18.319058] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/action/burger.hpp\n'}
+[18.319127] (host_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/msg\n'}
+[18.319186] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[18.319245] (host_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg\n'}
+[18.319311] (host_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/action\n'}
+[18.319372] (host_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/action/detail\n'}
+[18.319556] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/action/detail/arm__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[18.319626] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/action/detail/dds_fastrtps\n'}
+[18.319688] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/action/detail/burger__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[18.319751] (host_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/msg\n'}
+[18.319817] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[18.319883] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/lib/libhost_pkg__rosidl_typesupport_fastrtps_cpp.so\n'}
+[18.320131] (host_pkg) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/ryu/final_project_host/host_backend/install/host_pkg/lib/libhost_pkg__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[18.320203] (host_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg\n'}
+[18.320270] (host_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/action\n'}
+[18.320332] (host_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/action/detail\n'}
+[18.320401] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/action/detail/arm__type_support.c\n'}
+[18.320464] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/action/detail/burger__type_support.c\n'}
+[18.320530] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/action/detail/burger__rosidl_typesupport_introspection_c.h\n'}
+[18.320753] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/action/detail/arm__rosidl_typesupport_introspection_c.h\n'}
+[18.320827] (host_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/msg\n'}
+[18.320893] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[18.320954] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/lib/libhost_pkg__rosidl_typesupport_introspection_c.so\n'}
+[18.321024] (host_pkg) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/ryu/final_project_host/host_backend/install/host_pkg/lib/libhost_pkg__rosidl_typesupport_introspection_c.so" to ""\n'}
+[18.321084] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/lib/libhost_pkg__rosidl_typesupport_c.so\n'}
+[18.321352] (host_pkg) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/ryu/final_project_host/host_backend/install/host_pkg/lib/libhost_pkg__rosidl_typesupport_c.so" to ""\n'}
+[18.321431] (host_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg\n'}
+[18.321497] (host_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/action\n'}
+[18.321560] (host_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/action/detail\n'}
+[18.321633] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/action/detail/burger__type_support.cpp\n'}
+[18.321694] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/action/detail/burger__rosidl_typesupport_introspection_cpp.hpp\n'}
+[18.321755] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/action/detail/arm__type_support.cpp\n'}
+[18.321936] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/include/host_pkg/host_pkg/action/detail/arm__rosidl_typesupport_introspection_cpp.hpp\n'}
+[18.322008] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/lib/libhost_pkg__rosidl_typesupport_introspection_cpp.so\n'}
+[18.322211] (host_pkg) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/ryu/final_project_host/host_backend/install/host_pkg/lib/libhost_pkg__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[18.322285] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/lib/libhost_pkg__rosidl_typesupport_cpp.so\n'}
+[18.322889] (host_pkg) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/ryu/final_project_host/host_backend/install/host_pkg/lib/libhost_pkg__rosidl_typesupport_cpp.so" to ""\n'}
+[18.322968] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/environment/pythonpath.sh\n'}
+[18.323035] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/environment/pythonpath.dsv\n'}
+[18.323109] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/lib/python3.12/site-packages/host_pkg-0.0.0-py3.12.egg-info\n'}
+[18.323396] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/lib/python3.12/site-packages/host_pkg-0.0.0-py3.12.egg-info/dependency_links.txt\n'}
+[18.323474] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/lib/python3.12/site-packages/host_pkg-0.0.0-py3.12.egg-info/top_level.txt\n'}
+[18.323539] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/lib/python3.12/site-packages/host_pkg-0.0.0-py3.12.egg-info/PKG-INFO\n'}
+[18.323601] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/lib/python3.12/site-packages/host_pkg-0.0.0-py3.12.egg-info/SOURCES.txt\n'}
+[18.323671] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/lib/python3.12/site-packages/host_pkg\n'}
+[18.323735] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/lib/python3.12/site-packages/host_pkg/_host_pkg_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[18.323959] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/lib/python3.12/site-packages/host_pkg/_host_pkg_s.ep.rosidl_typesupport_c.c\n'}
+[18.324032] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/lib/python3.12/site-packages/host_pkg/action\n'}
+[18.324097] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/lib/python3.12/site-packages/host_pkg/action/_burger_s.c\n'}
+[18.324163] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/lib/python3.12/site-packages/host_pkg/action/_arm_s.c\n'}
+[18.324228] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/lib/python3.12/site-packages/host_pkg/action/_arm.py\n'}
+[18.324678] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/lib/python3.12/site-packages/host_pkg/action/_burger.py\n'}
+[18.324754] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/lib/python3.12/site-packages/host_pkg/action/__init__.py\n'}
+[18.324814] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/lib/python3.12/site-packages/host_pkg/_host_pkg_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[18.324877] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/lib/python3.12/site-packages/host_pkg/__init__.py\n'}
+[18.324936] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/lib/python3.12/site-packages/host_pkg/host_pkg_s__rosidl_typesupport_fastrtps_c.so\n'}
+[18.324996] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/lib/python3.12/site-packages/host_pkg/host_pkg_s__rosidl_typesupport_introspection_c.so\n'}
+[18.325053] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/lib/python3.12/site-packages/host_pkg/host_pkg_s__rosidl_typesupport_c.so\n'}
+[18.355252] (-) TimerEvent: {}
+[18.376582] (host_pkg) StdoutLine: {'line': b"Listing '/home/ryu/final_project_host/host_backend/install/host_pkg/lib/python3.12/site-packages/host_pkg'...\n"}
+[18.376756] (host_pkg) StdoutLine: {'line': b"Compiling '/home/ryu/final_project_host/host_backend/install/host_pkg/lib/python3.12/site-packages/host_pkg/__init__.py'...\n"}
+[18.376853] (host_pkg) StdoutLine: {'line': b"Listing '/home/ryu/final_project_host/host_backend/install/host_pkg/lib/python3.12/site-packages/host_pkg/action'...\n"}
+[18.376931] (host_pkg) StdoutLine: {'line': b"Compiling '/home/ryu/final_project_host/host_backend/install/host_pkg/lib/python3.12/site-packages/host_pkg/action/__init__.py'...\n"}
+[18.377018] (host_pkg) StdoutLine: {'line': b"Compiling '/home/ryu/final_project_host/host_backend/install/host_pkg/lib/python3.12/site-packages/host_pkg/action/_arm.py'...\n"}
+[18.377101] (host_pkg) StdoutLine: {'line': b"Compiling '/home/ryu/final_project_host/host_backend/install/host_pkg/lib/python3.12/site-packages/host_pkg/action/_burger.py'...\n"}
+[18.381655] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/lib/python3.12/site-packages/host_pkg/host_pkg_s__rosidl_typesupport_fastrtps_c.so\n'}
+[18.382045] (host_pkg) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/ryu/final_project_host/host_backend/install/host_pkg/lib/python3.12/site-packages/host_pkg/host_pkg_s__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[18.382159] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/lib/python3.12/site-packages/host_pkg/host_pkg_s__rosidl_typesupport_introspection_c.so\n'}
+[18.382398] (host_pkg) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/ryu/final_project_host/host_backend/install/host_pkg/lib/python3.12/site-packages/host_pkg/host_pkg_s__rosidl_typesupport_introspection_c.so" to ""\n'}
+[18.382641] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/lib/python3.12/site-packages/host_pkg/host_pkg_s__rosidl_typesupport_c.so\n'}
+[18.383006] (host_pkg) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/ryu/final_project_host/host_backend/install/host_pkg/lib/python3.12/site-packages/host_pkg/host_pkg_s__rosidl_typesupport_c.so" to ""\n'}
+[18.383107] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/lib/libhost_pkg__rosidl_generator_py.so\n'}
+[18.383452] (host_pkg) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/ryu/final_project_host/host_backend/install/host_pkg/lib/libhost_pkg__rosidl_generator_py.so" to ""\n'}
+[18.384043] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/ament_index/resource_index/rust_packages/host_pkg\n'}
+[18.384401] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/rust\n'}
+[18.384504] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/rust/Cargo.toml\n'}
+[18.384838] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/rust/build.rs\n'}
+[18.385380] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/rust/src\n'}
+[18.385704] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/rust/src/action\n'}
+[18.386022] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/rust/src/action/rmw.rs\n'}
+[18.386408] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/rust/src/lib.rs\n'}
+[18.386503] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/rust/src/action.rs\n'}
+[18.386766] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/action/Burger.idl\n'}
+[18.386866] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/action/Arm.idl\n'}
+[18.386957] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/action/Burger.action\n'}
+[18.387266] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/action/Arm.action\n'}
+[18.387585] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/ament_index/resource_index/package_run_dependencies/host_pkg\n'}
+[18.388070] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/ament_index/resource_index/parent_prefix_path/host_pkg\n'}
+[18.388406] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/environment/ament_prefix_path.sh\n'}
+[18.388503] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/environment/ament_prefix_path.dsv\n'}
+[18.388601] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/environment/path.sh\n'}
+[18.388868] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/environment/path.dsv\n'}
+[18.388970] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/local_setup.bash\n'}
+[18.389240] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/local_setup.sh\n'}
+[18.389335] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/local_setup.zsh\n'}
+[18.389438] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/local_setup.dsv\n'}
+[18.389714] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/package.dsv\n'}
+[18.389811] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/ament_index/resource_index/packages/host_pkg\n'}
+[18.390073] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/cmake/export_host_pkg__rosidl_generator_cExport.cmake\n'}
+[18.390442] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/cmake/export_host_pkg__rosidl_generator_cExport-noconfig.cmake\n'}
+[18.390529] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/cmake/export_host_pkg__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[18.390611] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/cmake/export_host_pkg__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[18.390693] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/cmake/export_host_pkg__rosidl_generator_cppExport.cmake\n'}
+[18.390771] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/cmake/export_host_pkg__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[18.390843] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/cmake/export_host_pkg__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[18.390912] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/cmake/host_pkg__rosidl_typesupport_introspection_cExport.cmake\n'}
+[18.390981] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/cmake/host_pkg__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[18.391043] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/cmake/host_pkg__rosidl_typesupport_cExport.cmake\n'}
+[18.391108] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/cmake/host_pkg__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[18.391170] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/cmake/host_pkg__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[18.391232] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/cmake/host_pkg__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[18.391294] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/cmake/host_pkg__rosidl_typesupport_cppExport.cmake\n'}
+[18.391355] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/cmake/host_pkg__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[18.391430] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/cmake/export_host_pkg__rosidl_generator_pyExport.cmake\n'}
+[18.391495] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/cmake/export_host_pkg__rosidl_generator_pyExport-noconfig.cmake\n'}
+[18.391559] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/cmake/rosidl_cmake-extras.cmake\n'}
+[18.391622] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[18.391683] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[18.391743] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[18.391812] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[18.391879] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[18.391938] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[18.392004] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/cmake/rosidl_cmake_aggregate_target-extras.cmake\n'}
+[18.392067] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/cmake/host_pkgConfig.cmake\n'}
+[18.392124] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/cmake/host_pkgConfig-version.cmake\n'}
+[18.392195] (host_pkg) StdoutLine: {'line': b'-- Installing: /home/ryu/final_project_host/host_backend/install/host_pkg/share/host_pkg/package.xml\n'}
+[18.397346] (host_pkg) CommandEnded: {'returncode': 0}
+[18.414404] (host_pkg) JobEnded: {'identifier': 'host_pkg', 'rc': 0}
+[18.414686] (-) EventReactorShutdown: {}

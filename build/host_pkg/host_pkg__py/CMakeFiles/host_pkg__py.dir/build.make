@@ -53,27 +53,27 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jeongje/final_project_ws/host/src/host_pkg
+CMAKE_SOURCE_DIR = /home/ryu/final_project_host/host_backend/src/host_pkg
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jeongje/final_project_ws/host/build/host_pkg
+CMAKE_BINARY_DIR = /home/ryu/final_project_host/host_backend/build/host_pkg
 
 # Utility rule file for host_pkg__py.
 
 # Include any custom commands dependencies for this target.
-include /home/jeongje/final_project_ws/host/build/host_pkg/host_pkg__py/CMakeFiles/host_pkg__py.dir/compiler_depend.make
+include /home/ryu/final_project_host/host_backend/build/host_pkg/host_pkg__py/CMakeFiles/host_pkg__py.dir/compiler_depend.make
 
 # Include the progress variables for this target.
-include /home/jeongje/final_project_ws/host/build/host_pkg/host_pkg__py/CMakeFiles/host_pkg__py.dir/progress.make
+include /home/ryu/final_project_host/host_backend/build/host_pkg/host_pkg__py/CMakeFiles/host_pkg__py.dir/progress.make
 
-/home/jeongje/final_project_ws/host/build/host_pkg/host_pkg__py/CMakeFiles/host_pkg__py: rosidl_generator_py/host_pkg/_host_pkg_s.ep.rosidl_typesupport_fastrtps_c.c
-/home/jeongje/final_project_ws/host/build/host_pkg/host_pkg__py/CMakeFiles/host_pkg__py: rosidl_generator_py/host_pkg/_host_pkg_s.ep.rosidl_typesupport_introspection_c.c
-/home/jeongje/final_project_ws/host/build/host_pkg/host_pkg__py/CMakeFiles/host_pkg__py: rosidl_generator_py/host_pkg/_host_pkg_s.ep.rosidl_typesupport_c.c
-/home/jeongje/final_project_ws/host/build/host_pkg/host_pkg__py/CMakeFiles/host_pkg__py: rosidl_generator_py/host_pkg/action/_burger.py
-/home/jeongje/final_project_ws/host/build/host_pkg/host_pkg__py/CMakeFiles/host_pkg__py: rosidl_generator_py/host_pkg/action/_arm.py
-/home/jeongje/final_project_ws/host/build/host_pkg/host_pkg__py/CMakeFiles/host_pkg__py: rosidl_generator_py/host_pkg/action/__init__.py
-/home/jeongje/final_project_ws/host/build/host_pkg/host_pkg__py/CMakeFiles/host_pkg__py: rosidl_generator_py/host_pkg/action/_burger_s.c
-/home/jeongje/final_project_ws/host/build/host_pkg/host_pkg__py/CMakeFiles/host_pkg__py: rosidl_generator_py/host_pkg/action/_arm_s.c
+/home/ryu/final_project_host/host_backend/build/host_pkg/host_pkg__py/CMakeFiles/host_pkg__py: rosidl_generator_py/host_pkg/_host_pkg_s.ep.rosidl_typesupport_fastrtps_c.c
+/home/ryu/final_project_host/host_backend/build/host_pkg/host_pkg__py/CMakeFiles/host_pkg__py: rosidl_generator_py/host_pkg/_host_pkg_s.ep.rosidl_typesupport_introspection_c.c
+/home/ryu/final_project_host/host_backend/build/host_pkg/host_pkg__py/CMakeFiles/host_pkg__py: rosidl_generator_py/host_pkg/_host_pkg_s.ep.rosidl_typesupport_c.c
+/home/ryu/final_project_host/host_backend/build/host_pkg/host_pkg__py/CMakeFiles/host_pkg__py: rosidl_generator_py/host_pkg/action/_burger.py
+/home/ryu/final_project_host/host_backend/build/host_pkg/host_pkg__py/CMakeFiles/host_pkg__py: rosidl_generator_py/host_pkg/action/_arm.py
+/home/ryu/final_project_host/host_backend/build/host_pkg/host_pkg__py/CMakeFiles/host_pkg__py: rosidl_generator_py/host_pkg/action/__init__.py
+/home/ryu/final_project_host/host_backend/build/host_pkg/host_pkg__py/CMakeFiles/host_pkg__py: rosidl_generator_py/host_pkg/action/_burger_s.c
+/home/ryu/final_project_host/host_backend/build/host_pkg/host_pkg__py/CMakeFiles/host_pkg__py: rosidl_generator_py/host_pkg/action/_arm_s.c
 
 rosidl_generator_py/host_pkg/_host_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/lib/rosidl_generator_py/rosidl_generator_py
 rosidl_generator_py/host_pkg/_host_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/lib/python3.12/site-packages/rosidl_generator_py/__init__.py
@@ -98,8 +98,8 @@ rosidl_generator_py/host_pkg/_host_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /op
 rosidl_generator_py/host_pkg/_host_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/action_msgs/msg/GoalStatusArray.idl
 rosidl_generator_py/host_pkg/_host_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/action_msgs/srv/CancelGoal.idl
 rosidl_generator_py/host_pkg/_host_pkg_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/unique_identifier_msgs/msg/UUID.idl
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/jeongje/final_project_ws/host/build/host_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code for ROS interfaces"
-	cd /home/jeongje/final_project_ws/host/build/host_pkg/host_pkg__py && /usr/bin/python3 /opt/ros/jazzy/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py --generator-arguments-file /home/jeongje/final_project_ws/host/build/host_pkg/rosidl_generator_py__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/ryu/final_project_host/host_backend/build/host_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code for ROS interfaces"
+	cd /home/ryu/final_project_host/host_backend/build/host_pkg/host_pkg__py && /usr/bin/python3 /opt/ros/jazzy/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py --generator-arguments-file /home/ryu/final_project_host/host_backend/build/host_pkg/rosidl_generator_py__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
 
 rosidl_generator_py/host_pkg/_host_pkg_s.ep.rosidl_typesupport_introspection_c.c: rosidl_generator_py/host_pkg/_host_pkg_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/host_pkg/_host_pkg_s.ep.rosidl_typesupport_introspection_c.c
@@ -122,7 +122,7 @@ rosidl_generator_py/host_pkg/action/_burger_s.c: rosidl_generator_py/host_pkg/_h
 rosidl_generator_py/host_pkg/action/_arm_s.c: rosidl_generator_py/host_pkg/_host_pkg_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/host_pkg/action/_arm_s.c
 
-host_pkg__py: /home/jeongje/final_project_ws/host/build/host_pkg/host_pkg__py/CMakeFiles/host_pkg__py
+host_pkg__py: /home/ryu/final_project_host/host_backend/build/host_pkg/host_pkg__py/CMakeFiles/host_pkg__py
 host_pkg__py: rosidl_generator_py/host_pkg/_host_pkg_s.ep.rosidl_typesupport_c.c
 host_pkg__py: rosidl_generator_py/host_pkg/_host_pkg_s.ep.rosidl_typesupport_fastrtps_c.c
 host_pkg__py: rosidl_generator_py/host_pkg/_host_pkg_s.ep.rosidl_typesupport_introspection_c.c
@@ -131,18 +131,18 @@ host_pkg__py: rosidl_generator_py/host_pkg/action/_arm.py
 host_pkg__py: rosidl_generator_py/host_pkg/action/_arm_s.c
 host_pkg__py: rosidl_generator_py/host_pkg/action/_burger.py
 host_pkg__py: rosidl_generator_py/host_pkg/action/_burger_s.c
-host_pkg__py: /home/jeongje/final_project_ws/host/build/host_pkg/host_pkg__py/CMakeFiles/host_pkg__py.dir/build.make
+host_pkg__py: /home/ryu/final_project_host/host_backend/build/host_pkg/host_pkg__py/CMakeFiles/host_pkg__py.dir/build.make
 .PHONY : host_pkg__py
 
 # Rule to build all files generated by this target.
-/home/jeongje/final_project_ws/host/build/host_pkg/host_pkg__py/CMakeFiles/host_pkg__py.dir/build: host_pkg__py
-.PHONY : /home/jeongje/final_project_ws/host/build/host_pkg/host_pkg__py/CMakeFiles/host_pkg__py.dir/build
+/home/ryu/final_project_host/host_backend/build/host_pkg/host_pkg__py/CMakeFiles/host_pkg__py.dir/build: host_pkg__py
+.PHONY : /home/ryu/final_project_host/host_backend/build/host_pkg/host_pkg__py/CMakeFiles/host_pkg__py.dir/build
 
-/home/jeongje/final_project_ws/host/build/host_pkg/host_pkg__py/CMakeFiles/host_pkg__py.dir/clean:
-	cd /home/jeongje/final_project_ws/host/build/host_pkg/host_pkg__py && $(CMAKE_COMMAND) -P CMakeFiles/host_pkg__py.dir/cmake_clean.cmake
-.PHONY : /home/jeongje/final_project_ws/host/build/host_pkg/host_pkg__py/CMakeFiles/host_pkg__py.dir/clean
+/home/ryu/final_project_host/host_backend/build/host_pkg/host_pkg__py/CMakeFiles/host_pkg__py.dir/clean:
+	cd /home/ryu/final_project_host/host_backend/build/host_pkg/host_pkg__py && $(CMAKE_COMMAND) -P CMakeFiles/host_pkg__py.dir/cmake_clean.cmake
+.PHONY : /home/ryu/final_project_host/host_backend/build/host_pkg/host_pkg__py/CMakeFiles/host_pkg__py.dir/clean
 
-/home/jeongje/final_project_ws/host/build/host_pkg/host_pkg__py/CMakeFiles/host_pkg__py.dir/depend:
-	cd /home/jeongje/final_project_ws/host/build/host_pkg && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jeongje/final_project_ws/host/src/host_pkg /home/jeongje/final_project_ws/host/build/host_pkg/host_pkg__py /home/jeongje/final_project_ws/host/build/host_pkg /home/jeongje/final_project_ws/host/build/host_pkg/host_pkg__py /home/jeongje/final_project_ws/host/build/host_pkg/host_pkg__py/CMakeFiles/host_pkg__py.dir/DependInfo.cmake "--color=$(COLOR)"
-.PHONY : /home/jeongje/final_project_ws/host/build/host_pkg/host_pkg__py/CMakeFiles/host_pkg__py.dir/depend
+/home/ryu/final_project_host/host_backend/build/host_pkg/host_pkg__py/CMakeFiles/host_pkg__py.dir/depend:
+	cd /home/ryu/final_project_host/host_backend/build/host_pkg && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ryu/final_project_host/host_backend/src/host_pkg /home/ryu/final_project_host/host_backend/build/host_pkg/host_pkg__py /home/ryu/final_project_host/host_backend/build/host_pkg /home/ryu/final_project_host/host_backend/build/host_pkg/host_pkg__py /home/ryu/final_project_host/host_backend/build/host_pkg/host_pkg__py/CMakeFiles/host_pkg__py.dir/DependInfo.cmake "--color=$(COLOR)"
+.PHONY : /home/ryu/final_project_host/host_backend/build/host_pkg/host_pkg__py/CMakeFiles/host_pkg__py.dir/depend
 

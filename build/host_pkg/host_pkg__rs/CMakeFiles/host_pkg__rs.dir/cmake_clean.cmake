@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
-  "/home/jeongje/final_project_ws/host/build/host_pkg/rosidl_generator_rs/host_pkg/rust/Cargo.toml"
-  "/home/jeongje/final_project_ws/host/build/host_pkg/rosidl_generator_rs/host_pkg/rust/build.rs"
-  "/home/jeongje/final_project_ws/host/build/host_pkg/rosidl_generator_rs/host_pkg/rust/src/action.rs"
-  "/home/jeongje/final_project_ws/host/build/host_pkg/rosidl_generator_rs/host_pkg/rust/src/action/rmw.rs"
-  "/home/jeongje/final_project_ws/host/build/host_pkg/rosidl_generator_rs/host_pkg/rust/src/lib.rs"
+  "/home/ryu/final_project_host/host_backend/build/host_pkg/rosidl_generator_rs/host_pkg/rust/Cargo.toml"
+  "/home/ryu/final_project_host/host_backend/build/host_pkg/rosidl_generator_rs/host_pkg/rust/build.rs"
+  "/home/ryu/final_project_host/host_backend/build/host_pkg/rosidl_generator_rs/host_pkg/rust/src/action.rs"
+  "/home/ryu/final_project_host/host_backend/build/host_pkg/rosidl_generator_rs/host_pkg/rust/src/action/rmw.rs"
+  "/home/ryu/final_project_host/host_backend/build/host_pkg/rosidl_generator_rs/host_pkg/rust/src/lib.rs"
   "CMakeFiles/host_pkg__rs"
 )
 

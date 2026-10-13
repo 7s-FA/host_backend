@@ -1,8 +1,8 @@
-# Install script for directory: /home/jeongje/final_project_ws/host/build/host_pkg/host_pkg__rs
+# Install script for directory: /home/ryu/final_project_host/host_backend/build/host_pkg/host_pkg__rs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/jeongje/final_project_ws/host/install/host_pkg")
+  set(CMAKE_INSTALL_PREFIX "/home/ryu/final_project_host/host_backend/install/host_pkg")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

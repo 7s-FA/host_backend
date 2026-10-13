@@ -51,6 +51,8 @@ class waffleActionClient(Node):
     def get_result_callback(self, future):
         result = future.result().result
 
+        shared_memory.waffle_end_flag = True
+
         shared_memory.waffle_success = result.success
         shared_memory.waffle_end_message = result.message
 

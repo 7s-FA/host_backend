@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jeongje/final_project_ws/host/src/host_pkg
+CMAKE_SOURCE_DIR = /home/ryu/final_project_host/host_backend/src/host_pkg
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jeongje/final_project_ws/host/build/host_pkg
+CMAKE_BINARY_DIR = /home/ryu/final_project_host/host_backend/build/host_pkg
 
 # Utility rule file for ament_cmake_python_build_host_pkg_egg.
 
@@ -67,7 +67,7 @@ include CMakeFiles/ament_cmake_python_build_host_pkg_egg.dir/compiler_depend.mak
 include CMakeFiles/ament_cmake_python_build_host_pkg_egg.dir/progress.make
 
 CMakeFiles/ament_cmake_python_build_host_pkg_egg:
-	cd /home/jeongje/final_project_ws/host/build/host_pkg/ament_cmake_python/host_pkg && /usr/bin/python3 setup.py egg_info
+	cd /home/ryu/final_project_host/host_backend/build/host_pkg/ament_cmake_python/host_pkg && /usr/bin/python3 setup.py egg_info
 
 ament_cmake_python_build_host_pkg_egg: CMakeFiles/ament_cmake_python_build_host_pkg_egg
 ament_cmake_python_build_host_pkg_egg: CMakeFiles/ament_cmake_python_build_host_pkg_egg.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/ament_cmake_python_build_host_pkg_egg.dir/clean:
 .PHONY : CMakeFiles/ament_cmake_python_build_host_pkg_egg.dir/clean
 
 CMakeFiles/ament_cmake_python_build_host_pkg_egg.dir/depend:
-	cd /home/jeongje/final_project_ws/host/build/host_pkg && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jeongje/final_project_ws/host/src/host_pkg /home/jeongje/final_project_ws/host/src/host_pkg /home/jeongje/final_project_ws/host/build/host_pkg /home/jeongje/final_project_ws/host/build/host_pkg /home/jeongje/final_project_ws/host/build/host_pkg/CMakeFiles/ament_cmake_python_build_host_pkg_egg.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/ryu/final_project_host/host_backend/build/host_pkg && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ryu/final_project_host/host_backend/src/host_pkg /home/ryu/final_project_host/host_backend/src/host_pkg /home/ryu/final_project_host/host_backend/build/host_pkg /home/ryu/final_project_host/host_backend/build/host_pkg /home/ryu/final_project_host/host_backend/build/host_pkg/CMakeFiles/ament_cmake_python_build_host_pkg_egg.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/ament_cmake_python_build_host_pkg_egg.dir/depend
 

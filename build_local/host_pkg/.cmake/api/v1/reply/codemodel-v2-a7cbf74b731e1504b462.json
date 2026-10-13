@@ -1,0 +1,267 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-8dc46736a889de3ccd5b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						15,
+						16,
+						17,
+						18,
+						19
+					]
+				},
+				{
+					"build" : "host_pkg__py",
+					"jsonFile" : "directory-host_pkg__py-ebcadc525d095a9cf308.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/ryu/final_project_host/host_backend/build_local/host_pkg/host_pkg__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "host_pkg__rs",
+					"jsonFile" : "directory-host_pkg__rs-d922483b6bc7aafe01e9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/ryu/final_project_host/host_backend/build_local/host_pkg/host_pkg__rs",
+					"targetIndexes" : 
+					[
+						14
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "host_pkg",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_host_pkg_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_host_pkg_egg-156f6f3671b4f7123ea6.json",
+					"name" : "ament_cmake_python_build_host_pkg_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_host_pkg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_host_pkg-2ac56058019b6c87203f.json",
+					"name" : "ament_cmake_python_copy_host_pkg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "host_pkg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-host_pkg-2af19b06e9cfab3448ae.json",
+					"name" : "host_pkg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "host_pkg__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-host_pkg__cpp-55c0bea02477df1bb83b.json",
+					"name" : "host_pkg__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "host_pkg__py::@e97c1d35787338d940db",
+					"jsonFile" : "target-host_pkg__py-c521f2b23fcedd8de099.json",
+					"name" : "host_pkg__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "host_pkg__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-host_pkg__rosidl_generator_c-e76821361fbbeb663b06.json",
+					"name" : "host_pkg__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "host_pkg__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-host_pkg__rosidl_generator_py-ba09eaef9aab94453015.json",
+					"name" : "host_pkg__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "host_pkg__rosidl_generator_type_description::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-host_pkg__rosidl_generator_type_description-66818ec3f0a451cdbe04.json",
+					"name" : "host_pkg__rosidl_generator_type_description",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "host_pkg__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-host_pkg__rosidl_typesupport_c-8c45b1e4d55044ea3735.json",
+					"name" : "host_pkg__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "host_pkg__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-host_pkg__rosidl_typesupport_cpp-df5febcbc414ae324f15.json",
+					"name" : "host_pkg__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "host_pkg__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-host_pkg__rosidl_typesupport_fastrtps_c-07f7907d50f99071e6ee.json",
+					"name" : "host_pkg__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "host_pkg__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-host_pkg__rosidl_typesupport_fastrtps_cpp-79e07f0f47fe0be03d96.json",
+					"name" : "host_pkg__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "host_pkg__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-host_pkg__rosidl_typesupport_introspection_c-0bac97b324b997df8743.json",
+					"name" : "host_pkg__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "host_pkg__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-host_pkg__rosidl_typesupport_introspection_cpp-d835de64ff2ad4b40eca.json",
+					"name" : "host_pkg__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "host_pkg__rs::@23cccdd681b549df4730",
+					"jsonFile" : "target-host_pkg__rs-59db9d28bbd2450bd2fd.json",
+					"name" : "host_pkg__rs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "host_pkg_s__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-host_pkg_s__rosidl_typesupport_c-0dd60d38dc4efb56b919.json",
+					"name" : "host_pkg_s__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "host_pkg_s__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-host_pkg_s__rosidl_typesupport_fastrtps_c-2f25bc0122cdbe8749f9.json",
+					"name" : "host_pkg_s__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "host_pkg_s__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-host_pkg_s__rosidl_typesupport_introspection_c-b14715f78ea02605c1aa.json",
+					"name" : "host_pkg_s__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "host_pkg_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-host_pkg_uninstall-c9f2b19574343973f10c.json",
+					"name" : "host_pkg_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-9a36314c40b4c341a6b0.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/ryu/final_project_host/host_backend/build_local/host_pkg",
+		"source" : "/home/ryu/final_project_host/host_backend/src/host_pkg"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

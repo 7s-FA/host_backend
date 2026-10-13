@@ -51,6 +51,8 @@ class Burger2ActionClient(Node):
     def get_result_callback(self, future):
         result = future.result().result
 
+        shared_memory.burger2_end_flag = True
+        
         shared_memory.burger2_success = result.success
         shared_memory.burger2_end_message = result.message
 

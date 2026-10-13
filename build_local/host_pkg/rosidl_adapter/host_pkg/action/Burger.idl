@@ -1,0 +1,28 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from host_pkg/action/Burger.action
+// generated code does not contain a copyright notice
+
+
+module host_pkg {
+  module action {
+    struct Burger_Goal {
+      string command;
+
+      float cmd_val;
+    };
+    struct Burger_Result {
+      boolean success;
+
+      string message;
+    };
+    struct Burger_Feedback {
+      float robot_x;
+
+      float robot_y;
+
+      string robot_theta;
+
+      string message;
+    };
+  };
+};

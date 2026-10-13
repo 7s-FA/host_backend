@@ -1,0 +1,113 @@
+[0.083s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', '--log-base', 'log_local', 'build', '--base-paths', 'src/host_pkg', '--build-base', 'build_local', '--install-base', 'install_local', '--packages-select', 'host_pkg']
+[0.083s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base='log_local', log_level=None, verb_name='build', build_base='/home/ryu/final_project_host/host_backend/build_local', install_base='/home/ryu/final_project_host/host_backend/install_local', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['src/host_pkg'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['host_pkg'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x780a1f7b2240>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x780a1fe2e6f0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x780a1fe2e6f0>>, mixin_verb=('build',))
+[0.116s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.116s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.116s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.116s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.116s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.116s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/ryu/final_project_host/host_backend/src/host_pkg'
+[0.117s] Level 1:colcon.colcon_core.package_identification:_identify(src/host_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.117s] Level 1:colcon.colcon_core.package_identification:_identify(src/host_pkg) by extension 'ignore'
+[0.117s] Level 1:colcon.colcon_core.package_identification:_identify(src/host_pkg) by extension 'ignore_ament_install'
+[0.117s] Level 1:colcon.colcon_core.package_identification:_identify(src/host_pkg) by extensions ['colcon_pkg']
+[0.117s] Level 1:colcon.colcon_core.package_identification:_identify(src/host_pkg) by extension 'colcon_pkg'
+[0.117s] Level 1:colcon.colcon_core.package_identification:_identify(src/host_pkg) by extensions ['colcon_meta']
+[0.117s] Level 1:colcon.colcon_core.package_identification:_identify(src/host_pkg) by extension 'colcon_meta'
+[0.117s] Level 1:colcon.colcon_core.package_identification:_identify(src/host_pkg) by extensions ['ros']
+[0.117s] Level 1:colcon.colcon_core.package_identification:_identify(src/host_pkg) by extension 'ros'
+[0.133s] DEBUG:colcon.colcon_core.package_identification:Package 'src/host_pkg' with type 'ros.ament_cmake' and name 'host_pkg'
+[0.133s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.146s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.146s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.148s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 406 installed packages in /opt/ros/jazzy
+[0.149s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.181s] Level 5:colcon.colcon_core.verb:set package 'host_pkg' build argument 'cmake_args' from command line to 'None'
+[0.181s] Level 5:colcon.colcon_core.verb:set package 'host_pkg' build argument 'cmake_target' from command line to 'None'
+[0.181s] Level 5:colcon.colcon_core.verb:set package 'host_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.181s] Level 5:colcon.colcon_core.verb:set package 'host_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.181s] Level 5:colcon.colcon_core.verb:set package 'host_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.181s] Level 5:colcon.colcon_core.verb:set package 'host_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.181s] Level 5:colcon.colcon_core.verb:set package 'host_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.181s] Level 5:colcon.colcon_core.verb:set package 'host_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.181s] Level 5:colcon.colcon_core.verb:set package 'host_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.181s] DEBUG:colcon.colcon_core.verb:Building package 'host_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ryu/final_project_host/host_backend/build_local/host_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ryu/final_project_host/host_backend/install_local/host_pkg', 'merge_install': False, 'path': '/home/ryu/final_project_host/host_backend/src/host_pkg', 'symlink_install': False, 'test_result_base': None}
+[0.181s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.181s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.181s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ryu/final_project_host/host_backend/src/host_pkg' with build type 'ament_cmake'
+[0.181s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ryu/final_project_host/host_backend/src/host_pkg'
+[0.184s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.184s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.184s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.188s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ryu/final_project_host/host_backend/build_local/host_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/ryu/final_project_host/host_backend/src/host_pkg -DCMAKE_INSTALL_PREFIX=/home/ryu/final_project_host/host_backend/install_local/host_pkg
+[2.745s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ryu/final_project_host/host_backend/build_local/host_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/ryu/final_project_host/host_backend/src/host_pkg -DCMAKE_INSTALL_PREFIX=/home/ryu/final_project_host/host_backend/install_local/host_pkg
+[2.746s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ryu/final_project_host/host_backend/build_local/host_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/ryu/final_project_host/host_backend/build_local/host_pkg -- -j16 -l16
+[5.660s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ryu/final_project_host/host_backend/build_local/host_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/ryu/final_project_host/host_backend/build_local/host_pkg -- -j16 -l16
+[5.665s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ryu/final_project_host/host_backend/build_local/host_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/ryu/final_project_host/host_backend/build_local/host_pkg
+[5.721s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(host_pkg)
+[5.721s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ryu/final_project_host/host_backend/build_local/host_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/ryu/final_project_host/host_backend/build_local/host_pkg
+[5.723s] Level 1:colcon.colcon_core.environment:checking '/home/ryu/final_project_host/host_backend/install_local/host_pkg' for CMake module files
+[5.724s] Level 1:colcon.colcon_core.environment:checking '/home/ryu/final_project_host/host_backend/install_local/host_pkg' for CMake config files
+[5.724s] Level 1:colcon.colcon_core.shell:create_environment_hook('host_pkg', 'cmake_prefix_path')
+[5.724s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryu/final_project_host/host_backend/install_local/host_pkg/share/host_pkg/hook/cmake_prefix_path.ps1'
+[5.724s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ryu/final_project_host/host_backend/install_local/host_pkg/share/host_pkg/hook/cmake_prefix_path.dsv'
+[5.725s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryu/final_project_host/host_backend/install_local/host_pkg/share/host_pkg/hook/cmake_prefix_path.sh'
+[5.725s] Level 1:colcon.colcon_core.environment:checking '/home/ryu/final_project_host/host_backend/install_local/host_pkg/lib'
+[5.725s] Level 1:colcon.colcon_core.shell:create_environment_hook('host_pkg', 'ld_library_path_lib')
+[5.725s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryu/final_project_host/host_backend/install_local/host_pkg/share/host_pkg/hook/ld_library_path_lib.ps1'
+[5.726s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ryu/final_project_host/host_backend/install_local/host_pkg/share/host_pkg/hook/ld_library_path_lib.dsv'
+[5.726s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryu/final_project_host/host_backend/install_local/host_pkg/share/host_pkg/hook/ld_library_path_lib.sh'
+[5.726s] Level 1:colcon.colcon_core.environment:checking '/home/ryu/final_project_host/host_backend/install_local/host_pkg/bin'
+[5.726s] Level 1:colcon.colcon_core.environment:checking '/home/ryu/final_project_host/host_backend/install_local/host_pkg/lib/pkgconfig/host_pkg.pc'
+[5.726s] Level 1:colcon.colcon_core.environment:checking '/home/ryu/final_project_host/host_backend/install_local/host_pkg/lib/python3.12/site-packages'
+[5.726s] Level 1:colcon.colcon_core.shell:create_environment_hook('host_pkg', 'pythonpath')
+[5.726s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryu/final_project_host/host_backend/install_local/host_pkg/share/host_pkg/hook/pythonpath.ps1'
+[5.727s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ryu/final_project_host/host_backend/install_local/host_pkg/share/host_pkg/hook/pythonpath.dsv'
+[5.727s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryu/final_project_host/host_backend/install_local/host_pkg/share/host_pkg/hook/pythonpath.sh'
+[5.727s] Level 1:colcon.colcon_core.environment:checking '/home/ryu/final_project_host/host_backend/install_local/host_pkg/bin'
+[5.727s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryu/final_project_host/host_backend/install_local/host_pkg/share/host_pkg/package.ps1'
+[5.728s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ryu/final_project_host/host_backend/install_local/host_pkg/share/host_pkg/package.dsv'
+[5.728s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryu/final_project_host/host_backend/install_local/host_pkg/share/host_pkg/package.sh'
+[5.729s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryu/final_project_host/host_backend/install_local/host_pkg/share/host_pkg/package.bash'
+[5.729s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryu/final_project_host/host_backend/install_local/host_pkg/share/host_pkg/package.zsh'
+[5.730s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ryu/final_project_host/host_backend/install_local/host_pkg/share/colcon-core/packages/host_pkg)
+[5.730s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(host_pkg)
+[5.730s] Level 1:colcon.colcon_core.environment:checking '/home/ryu/final_project_host/host_backend/install_local/host_pkg' for CMake module files
+[5.730s] Level 1:colcon.colcon_core.environment:checking '/home/ryu/final_project_host/host_backend/install_local/host_pkg' for CMake config files
+[5.731s] Level 1:colcon.colcon_core.shell:create_environment_hook('host_pkg', 'cmake_prefix_path')
+[5.731s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryu/final_project_host/host_backend/install_local/host_pkg/share/host_pkg/hook/cmake_prefix_path.ps1'
+[5.731s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ryu/final_project_host/host_backend/install_local/host_pkg/share/host_pkg/hook/cmake_prefix_path.dsv'
+[5.731s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryu/final_project_host/host_backend/install_local/host_pkg/share/host_pkg/hook/cmake_prefix_path.sh'
+[5.731s] Level 1:colcon.colcon_core.environment:checking '/home/ryu/final_project_host/host_backend/install_local/host_pkg/lib'
+[5.731s] Level 1:colcon.colcon_core.shell:create_environment_hook('host_pkg', 'ld_library_path_lib')
+[5.732s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryu/final_project_host/host_backend/install_local/host_pkg/share/host_pkg/hook/ld_library_path_lib.ps1'
+[5.732s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ryu/final_project_host/host_backend/install_local/host_pkg/share/host_pkg/hook/ld_library_path_lib.dsv'
+[5.732s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryu/final_project_host/host_backend/install_local/host_pkg/share/host_pkg/hook/ld_library_path_lib.sh'
+[5.732s] Level 1:colcon.colcon_core.environment:checking '/home/ryu/final_project_host/host_backend/install_local/host_pkg/bin'
+[5.732s] Level 1:colcon.colcon_core.environment:checking '/home/ryu/final_project_host/host_backend/install_local/host_pkg/lib/pkgconfig/host_pkg.pc'
+[5.732s] Level 1:colcon.colcon_core.environment:checking '/home/ryu/final_project_host/host_backend/install_local/host_pkg/lib/python3.12/site-packages'
+[5.732s] Level 1:colcon.colcon_core.shell:create_environment_hook('host_pkg', 'pythonpath')
+[5.732s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryu/final_project_host/host_backend/install_local/host_pkg/share/host_pkg/hook/pythonpath.ps1'
+[5.733s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ryu/final_project_host/host_backend/install_local/host_pkg/share/host_pkg/hook/pythonpath.dsv'
+[5.733s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryu/final_project_host/host_backend/install_local/host_pkg/share/host_pkg/hook/pythonpath.sh'
+[5.733s] Level 1:colcon.colcon_core.environment:checking '/home/ryu/final_project_host/host_backend/install_local/host_pkg/bin'
+[5.733s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryu/final_project_host/host_backend/install_local/host_pkg/share/host_pkg/package.ps1'
+[5.734s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ryu/final_project_host/host_backend/install_local/host_pkg/share/host_pkg/package.dsv'
+[5.734s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryu/final_project_host/host_backend/install_local/host_pkg/share/host_pkg/package.sh'
+[5.734s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryu/final_project_host/host_backend/install_local/host_pkg/share/host_pkg/package.bash'
+[5.734s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryu/final_project_host/host_backend/install_local/host_pkg/share/host_pkg/package.zsh'
+[5.735s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ryu/final_project_host/host_backend/install_local/host_pkg/share/colcon-core/packages/host_pkg)
+[5.735s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[5.735s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[5.735s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[5.735s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[5.735s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[5.735s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ryu/final_project_host/host_backend/install_local/local_setup.ps1'
+[5.736s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ryu/final_project_host/host_backend/install_local/_local_setup_util_ps1.py'
+[5.737s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ryu/final_project_host/host_backend/install_local/setup.ps1'
+[5.737s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ryu/final_project_host/host_backend/install_local/local_setup.sh'
+[5.738s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ryu/final_project_host/host_backend/install_local/_local_setup_util_sh.py'
+[5.738s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ryu/final_project_host/host_backend/install_local/setup.sh'
+[5.738s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ryu/final_project_host/host_backend/install_local/local_setup.bash'
+[5.739s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ryu/final_project_host/host_backend/install_local/setup.bash'
+[5.739s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ryu/final_project_host/host_backend/install_local/local_setup.zsh'
+[5.740s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ryu/final_project_host/host_backend/install_local/setup.zsh'

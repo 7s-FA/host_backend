@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "rosidl_typesupport_interface/macros.h"
-#include "host_pkg/action/detail/arm__struct.h"
 #include "host_pkg/action/detail/arm__type_support.h"
 #include "host_pkg/action/detail/arm__functions.h"
+#include "host_pkg/action/detail/arm__struct.h"
+#include "rosidl_typesupport_interface/macros.h"
 
 #ifdef __cplusplus
 extern "C"
