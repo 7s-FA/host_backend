@@ -1,66 +1,99 @@
+"""Host runtime: web order adapter + result-driven controller + ROS Action clients."""
+import json
+import math
+import os
+from pathlib import Path
+import queue
 import rclpy
-import threading
-from rclpy.executors import MultiThreadedExecutor
-from burger1_node import Burger1ActionClient
-from burger2_node import Burger2ActionClient
-from waffle_node import waffleActionClient
+from rclpy.node import Node
+from rclpy.executors import ExternalShutdownException
+from std_msgs.msg import String
+from action_transport import ActionTransport
+from full_reset import FullResetController as ProcessController
+from http_adapter import HttpAdapter
 
-from arm1_node import Arm1ActionClient
-from arm2_node import Arm2ActionClient
-from arm3_node import Arm3ActionClient
 
-from web_node import WebDataPase
+def positive_setting(name, default, maximum):
+    value = float(os.environ.get(name, default))
+    if not math.isfinite(value) or not 0 < value <= maximum:
+        raise ValueError(f'{name}: 0 초과 {maximum} 이하의 유한 값이 필요합니다.')
+    return value
 
-from control import RobotController
+
+class HostRuntime(Node):
+    def __init__(self):
+        super().__init__('control')
+        self.events = queue.Queue()
+        self.transport = ActionTransport(self, self.events, positive_setting('HOST_SPEED_PERCENT', 100, 100))
+        self.bridge = HttpAdapter(os.environ.get('ROBOT3_BRIDGE_TOKEN', ''))
+        mode = 'mock' if os.environ.get('HOST_MOCK') == '1' else 'hardware'
+        runtime = Path(os.environ.get('HOST_RUNTIME_DIR', Path(__file__).resolve().parents[4] / '.runtime/host'))
+        state_file = os.environ.get('HOST_STATE_FILE', str(runtime / ('order-' + mode + '.json')))
+        self.controller = ProcessController(
+            self.transport, state_file=state_file, mode=mode,
+            manual_inspection=os.environ.get('HOST_MANUAL_INSPECTION') == '1',
+            goal_timeout=positive_setting('HOST_GOAL_TIMEOUT', 5, 60),
+            motion_timeout=positive_setting('HOST_MOTION_TIMEOUT', 300, 3600),
+            arm_timeout=positive_setting('HOST_ARM_TIMEOUT', 600, 3600))
+        self.publisher = self.create_publisher(String, '/ros_to_web', 10)
+        self.timer = self.create_timer(0.1, self.tick)
+        self.bridge.set_report(self.controller.snapshot())
+        self.bridge.start()
+        self.get_logger().info(f'관제 준비 · {mode} · 새 주문 병렬 계획 parallel-v1 · 기존 주문 유지 · 주문 수신 전 동작 없음')
+
+    def tick(self):
+        for _ in range(100):
+            try:
+                event = self.events.get_nowait()
+            except queue.Empty:
+                break
+            self.controller.event(*event)
+        # Set connectivity before processing a newly received user command.
+        connected = self.bridge.connected()
+        self.controller.link = connected
+        self.controller.ready = self.transport.ready()
+        for _ in range(100):
+            try:
+                command = self.bridge.commands.get_nowait()
+            except queue.Empty:
+                break
+            if command.get('action') == '_session_changed':
+                self.controller.fail('웹 API 서버가 재시작되었습니다.', uncertain=True)
+            else:
+                self.controller.command(command)
+        self.controller.tick(connected)
+        report = self.controller.snapshot()
+        self.bridge.set_report(report)
+        self.publisher.publish(String(data=json.dumps({'protocol': 2, 'host_mode': report['runtime_mode'],
+                                                       'order': report['order'], 'message': 'Host 상태'}, ensure_ascii=False)))
+
+    def close(self):
+        if self.controller.reset_busy():
+            self.controller.abort_full_reset('관제 종료 · 전체 초기화 결과 확인 필요')
+        elif (self.controller.active or {}).get('preparation'):
+            self.controller.note('관제 종료 · 주차 준비 결과 확인 필요')
+            self.controller.save()
+        elif (self.controller.active or {}).get('manual'):
+            self.controller.fail_manual('관제 프로세스 종료 · 수동 이동 결과 미확인')
+        else:
+            self.controller.fail('관제 프로세스 종료 · 작업 결과 미확인', uncertain=True)
+        self.bridge.close()
+        self.destroy_node()
+
 
 def main(args=None):
     rclpy.init(args=args)
-
-    WebDataPaser = WebDataPase()
-
-    Burger1Act = Burger1ActionClient()
-    Burger2Act = Burger2ActionClient()
-    WaffleAct = waffleActionClient()
-
-    Arm1Act = Arm1ActionClient()
-    Arm2Act = Arm2ActionClient()
-    Arm3Act = Arm3ActionClient()
-
-    Controller = RobotController(Burger1Act, Burger2Act, WaffleAct, Arm1Act, Arm2Act, Arm3Act) # waffle 까지 추가해서 해줘야 함 우선 테스트를 위해 버거 1,2만 
-
-    # Burger1Act.send_goal(command="move_forward", speed=1.5)
-
-    executor = MultiThreadedExecutor()
-    executor.add_node(WebDataPaser)
-
-    executor.add_node(Burger1Act)
-    executor.add_node(Burger2Act)
-    executor.add_node(WaffleAct)
-
-    executor.add_node(Arm1Act)
-    executor.add_node(Arm2Act)
-    executor.add_node(Arm3Act)
-
-    executor.add_node(Controller)
-    # 핵심 수정: send_goal을 별도 스레드에서 실행하여 main이 멈추지 않고 즉시 executor.spin()으로 진입하게 함
-
+    node = None
     try:
-        executor.spin()
-    except KeyboardInterrupt:
-        # WebDataPaser.send_status_to_web() # 끝날때 이부분 실행해줘야 되고 이앞에서 플래그 같을걸로 web쪽에 데이터 끝낸다는걸 알려줘야 함.
-
-        Burger1Act.destroy_node()
-        Burger2Act.destroy_node()
-        WaffleAct.destroy_node()
-
-        Arm1Act.destroy_node()
-        Arm2Act.destroy_node()
-        Arm3Act.destroy_node()
-
-        WebDataPaser.destroy_node()
-        Controller.destroy_node()
-        rclpy.shutdown()
+        node = HostRuntime()
+        rclpy.spin(node)
+    except (KeyboardInterrupt, ExternalShutdownException):
         pass
+    finally:
+        if node:
+            node.close()
+        rclpy.try_shutdown()
+
 
 if __name__ == '__main__':
     main()

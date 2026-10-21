@@ -1,0 +1,60 @@
+const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
+const assert=require('node:assert/strict');
+(async()=>{
+ const browser=await chromium.launch({headless:true,executablePath:process.env.CHROME_PATH||'/usr/bin/google-chrome',args:['--no-sandbox']});
+ try{
+  const page=await browser.newPage({viewport:{width:1440,height:1080}}),errors=[];
+  page.on('pageerror',e=>errors.push(e.message));
+  page.setDefaultTimeout(20000);
+  await page.goto('http://127.0.0.1:8082/control.html');
+  await page.waitForFunction(()=>!document.getElementById('start-order').disabled);
+  assert.match(await page.locator('#bridge-pill').textContent(),/모의 장치/);
+  await page.waitForFunction(()=>document.querySelector('[data-device-connection="host"]').dataset.state==='online');
+  await page.waitForFunction(()=>['M1','M2','warehouse','production'].every(key=>document.querySelector(`[data-device-connection="${key}"]`).dataset.state==='online'));
+  await page.locator('[data-product-type="A"]').click();
+  await page.locator('[data-quantity="1"]').click();
+  await page.locator('#auto-advance').uncheck();
+  await page.locator('#start-order').click();
+  await page.waitForFunction(()=>!document.getElementById('next-stage').disabled);
+  assert.match(await page.locator('#stage-number').textContent(),/^1 \/ 6/);
+  await page.locator('#pause-order').click();
+  await page.waitForFunction(()=>document.getElementById('pause-order').textContent==='재개');
+  assert(await page.locator('#next-stage').isDisabled());
+  await page.locator('#pause-order').click();
+  await page.waitForFunction(()=>!document.getElementById('next-stage').disabled);
+  for(let stage=2;stage<=6;stage++){
+   await page.locator('#next-stage').click();
+   await page.waitForFunction(n=>document.getElementById('stage-number').textContent===`${n} / 6`,stage);
+   if(stage<6)await page.waitForFunction(()=>!document.getElementById('next-stage').disabled);
+  }
+  await page.waitForFunction(()=>!document.getElementById('start-order').disabled);
+  assert.equal(await page.locator('#completed-count').textContent(),'1');
+  console.log('PASS browser manual A1: start, per-step next, pause, resume, done');
+  await page.locator('[data-product-type="B"]').click();
+  await page.locator('[data-quantity="2"]').click();
+  await page.locator('#auto-advance').check();
+  await page.locator('#start-order').click();
+  await page.waitForFunction(()=>!document.getElementById('pause-order').disabled);
+  await page.locator('#pause-order').click();
+  await page.waitForFunction(()=>document.getElementById('pause-order').textContent==='재개');
+  const stage=await page.locator('#stage-number').textContent();
+  await page.waitForTimeout(1400);
+  assert.equal(await page.locator('#stage-number').textContent(),stage);
+  await page.locator('#pause-order').click();
+  await page.waitForFunction(()=>!document.getElementById('start-order').disabled,null,{timeout:45000});
+  assert.equal(await page.locator('#completed-count').textContent(),'2');
+  assert.equal(await page.locator('#product-count').textContent(),'0');
+  assert.equal(await page.locator('#transport-count').textContent(),'0');
+  assert.equal(await page.locator('#stage-number').textContent(),'14 / 14');
+  await page.locator('#host-log').click();
+  assert(await page.locator('#log-dialog').isVisible());
+  assert.match(await page.locator('#log-entries').textContent(),/주문 완료/);
+  await page.keyboard.press('Escape');
+  await page.screenshot({path:'/tmp/host-process-desktop.png',fullPage:true});
+  await page.setViewportSize({width:390,height:844});
+  assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Mobile overflow');
+  await page.screenshot({path:'/tmp/host-process-mobile.png',fullPage:true});
+  assert.deepEqual(errors,[]);
+  console.log('PASS browser automatic B2: pause/resume, arm3 counts, all returns, logs, mobile layout');
+ }finally{await browser.close();}
+})().catch(e=>{console.error(e);process.exitCode=1;});

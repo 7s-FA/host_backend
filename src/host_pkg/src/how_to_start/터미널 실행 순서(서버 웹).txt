@@ -1,15 +1,25 @@
-1번 터미널 (브릿지 launch)
-source ~/opt/ros/jazzy/setup.bash
-ros2 launch rosbridge_server rosbridge_websocket_launch.xml
+관제 PC 통합 실행 (현재 작업 공간: /home/operator/final_project)
 
-2번 터미널 (파이썬 수신 node 실행)
-cd ~/final_project_ws/host
-source /opt/ros/jazzy/setup.bash
-source ./install/setup.bash
-python3 ./src/host_pkg/src/main.py
+터미널 하나에서:
+  bash /home/operator/final_project/start_host.sh
 
-3번 터미널 (Local Web Server 실행)
-cd ~/host_web
-python3 -m http.server 8082
+화면:
+  http://localhost:8082/control.html
 
-- 웹 켜기 : http://localhost:8082/index.html
+점검만:
+  bash /home/operator/final_project/start_host.sh --check
+
+Action 타입 재빌드:
+  bash /home/operator/final_project/start_host.sh --build
+
+웹·rosbridge·rosapi만 실행:
+  bash /home/operator/final_project/start_host.sh --monitor-only
+
+Ctrl+C로 함께 종료합니다. 통신 종료는 로봇 정지 명령이 아닙니다.
+ROS_DOMAIN_ID=40, Fast DDS, SUBNET 검색을 사용합니다.
+환경: /home/operator/final_project/config/host.env
+로그: /home/operator/final_project/.runtime/host/log
+
+기존 node / bridge / webserver 셸 별칭 대신 위 통합 실행기를 사용하세요.
+모의 전체 공정: bash /home/operator/final_project/start_host.sh --mock
+모의 시험은 Domain 149 / LOCALHOST로 실물과 분리합니다.

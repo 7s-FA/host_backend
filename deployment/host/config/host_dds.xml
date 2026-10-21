@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<profiles xmlns="http://www.eprosima.com/XMLSchemas/fastRTPS_Profiles">
+  <transport_descriptors><transport_descriptor><transport_id>host_lan</transport_id><type>UDPv4</type><interfaceWhiteList><address>192.0.2.120</address></interfaceWhiteList><maxInitialPeersRange>32</maxInitialPeersRange></transport_descriptor></transport_descriptors>
+  <participant profile_name="host_lan" is_default_profile="true"><rtps>
+    <userTransports><transport_id>host_lan</transport_id></userTransports><useBuiltinTransports>false</useBuiltinTransports>
+    <propertiesPolicy><properties><property><name>fastdds.max_message_size</name><value>1400</value></property></properties></propertiesPolicy>
+    <builtin><initialPeersList>
+      <locator><udpv4><address>192.0.2.104</address></udpv4></locator>
+      <locator><udpv4><address>192.0.2.102</address></udpv4></locator>
+      <locator><udpv4><address>192.0.2.113</address></udpv4></locator>
+      <locator><udpv4><address>192.0.2.166</address></udpv4></locator>
+      <locator><udpv4><address>192.0.2.120</address></udpv4></locator>
+      <locator><udpv4><address>239.255.0.1</address><port>17400</port></udpv4></locator>
+    </initialPeersList></builtin>
+  </rtps></participant>
+</profiles>
