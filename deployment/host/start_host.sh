@@ -4,11 +4,11 @@ set -eo pipefail
 usage() {
     cat <<'HELP'
 사용법: bash start_host.sh [옵션] (스크립트의 절대경로로도 실행 가능)
-  (옵션 없음)       웹(8082) + rosbridge(9090) + rosapi + 실물 관제 백엔드
+  (옵션 없음)       웹(8082) + rosbridge(9090) + rosapi + 실물 관제 백엔드 (장치 초기 준비 없음)
   --mock            모의 ROS 장치와 전체 공정 실행 (Domain 149 / LOCALHOST 고정)
   --monitor-only    웹 + rosbridge/rosapi만 실행 (백엔드 제외)
   --no-browser      브라우저 자동 열기 없이 실행
-  --no-arm-prepare  잠금 해제·팔·리니어·주차 준비 없이 관제만 실행 (오류 복구용)
+  --no-arm-prepare  이전 명령 호환용 (기본 실행도 장치 초기 준비 생략)
   --manual          수동 점검: 초기 준비 생략, 연결된 로봇 개별 이동, 전체 공정 시작 금지
   --check           환경·Action 타입·포트 점검 후 종료, ROS 노드 실행 없음
   --build           현재 경로에서 Action 타입 재빌드 및 점검 후 종료
@@ -16,6 +16,7 @@ usage() {
 
 첫 실행 또는 Action 소스/경로 변경 시 자동으로 로컬 빌드합니다.
 화면: 서버 준비 후 기본 브라우저에서 http://localhost:8082/control.html 자동 열기
+장치 초기 준비: 웹의 전체 초기화 버튼에서 현장 확인 후 실행
 종료: Ctrl+C (프로세스 종료이며 로봇 정지 명령은 아님)
 HELP
 }
@@ -23,7 +24,6 @@ HELP
 mode=run
 with_backend=true
 mock=false
-prepare_arms=true
 manual=false
 open_browser="${HOST_OPEN_BROWSER:-1}"
 for argument in "$@"; do
@@ -37,8 +37,8 @@ for argument in "$@"; do
         --monitor-only) with_backend=false ;;
         --mock) mock=true ;;
         --no-browser) open_browser=0 ;;
-        --no-arm-prepare) prepare_arms=false ;;
-        --manual) manual=true; prepare_arms=false ;;
+        --no-arm-prepare) : ;; # 기존 별칭과 실행 명령 호환
+        --manual) manual=true ;;
         -h|--help) usage; exit 0 ;;
         *) echo "알 수 없는 옵션: $argument" >&2; usage >&2; exit 2 ;;
     esac
@@ -120,10 +120,6 @@ if [[ "$mode" == build ]]; then
 fi
 
 /usr/bin/python3 "$checker"
-if [[ "$prepare_arms" == true && "$mock" == false && "$with_backend" == true && "$ROS_DOMAIN_ID" == 40 ]]; then
-    echo '실물 시작 준비: 서버 확인 → 중단 작업 정리·정지 잠금 해제 → M1/M2 센서·토크 준비 → 팔1·2·3 저장 자세 → 리니어 바깥쪽 위치 → M1·M2 지정 주차 → 관제 화면'
-    /usr/bin/python3 "$HOST_PROJECT_ROOT/scripts/prepare_cells.py"
-fi
 if [[ "$open_browser" == 1 ]]; then
     /usr/bin/python3 "$page_opener" --mode "$page_mode" "${page_options[@]}" --parent-pid "$$" 9>&- &
 fi
@@ -134,6 +130,9 @@ else
     unset ROBOT3_BRIDGE_TOKEN
 fi
 echo "관제 실행: domain=$ROS_DOMAIN_ID / backend=$with_backend"
+if [[ "$mock" == false && "$with_backend" == true && "$manual" == false ]]; then
+    echo '장치 초기 준비 생략 · 필요할 때 웹의 전체 초기화 버튼으로 실행하세요.'
+fi
 if [[ "$manual" == true ]]; then echo '수동 점검 모드 · 초기 준비 생략 · 선택한 로봇만 연결 확인 · 전체 공정 시작 비활성'; fi
 echo '공정 관제: http://localhost:8082/control.html'
 if [[ "$mock" == true ]]; then echo '모의 실행: 실물 로봇 연결 없음'; fi

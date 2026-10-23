@@ -54,7 +54,7 @@ def cleanup_only(send, verify, report=print):
     except Exception as exc: failures.append('장치 정리 후 확인: '+str(exc))
     if failures:
         raise RuntimeError('전체 정리 미완료\n'+'\n'.join(failures))
-    report('전체 작업 정리 완료. 다음: hostrun (센서·모터·초기 자세 준비 후 웹 실행)')
+    report('전체 작업 정리 완료. 다음: hostrun → 연결 확인 → 필요 시 웹의 전체 초기화')
 
 
 def prepare_amrs():
@@ -72,7 +72,7 @@ def main(*, cleanup=False):
     saved=json.loads(path.read_text()) if path.exists() else {}
     if cleanup:
         if unresolved(saved) or saved.get('recovery_stop') or saved.get('stop_request') or saved.get('reset_pending') or (saved.get('full_reset') or {}).get('stop_id'):
-            raise RuntimeError('미정리 주문/응답 미확인 작업이 있습니다. hostrun --no-arm-prepare로 웹을 열어 중단·결과 확인·실패 주문 초기화를 먼저 진행하세요. 기록은 유지합니다.')
+            raise RuntimeError('미정리 주문/응답 미확인 작업이 있습니다. hostrun으로 웹을 열어 중단·결과 확인·실패 주문 초기화를 먼저 진행하세요. 기록은 유지합니다.')
         print('팔1·팔2/3 중단 작업 정리 및 리니어 정지 확인, M1/M2 정지 잠금 해제',flush=True)
         print('모든 장치가 실제로 멈췄고 공정이 끝났을 때만 실행하세요. 원점 복귀·주차 이동·리니어 이동·팔 작업 재개는 요청하지 않습니다.',flush=True)
         if input('확인했다면 "정리" 입력 (그 외 취소): ').strip() != '정리':
@@ -217,5 +217,5 @@ if __name__=='__main__':
     try:main(cleanup=args.cleanup_only)
     except (Exception,KeyboardInterrupt) as exc:
         print('시작 준비 중단: '+str(exc),file=sys.stderr)
-        print('상태 확인용 웹만 열기: hostrun --no-arm-prepare',file=sys.stderr)
+        print('상태 확인용 웹 열기: hostrun',file=sys.stderr)
         raise SystemExit(1)

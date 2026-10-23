@@ -20,10 +20,15 @@ class Step:
     label: str
 
 
-def make_plan(product, quantity):
+def make_plan(product, quantity, products=None):
     if product not in ('A', 'B') or type(quantity) is not int or quantity not in (1, 2):
         raise ValueError('A/B 제품과 수량 1/2만 지원합니다.')
+    products = products if products is not None else [product] * quantity
+    if not isinstance(products, list) or len(products) != quantity or any(p not in ('A', 'B') for p in products):
+        raise ValueError('제품별 공정 목록 형식 오류')
     def step(device, command, number, label):
+        if device.startswith('arm'):
+            command = command.rsplit('_', 1)[0] + '_' + products[number - 1]
         return Step(device, command, number, label)
     plan = [step('M1', 'GO_TO_MAT', 1, 'M1 자재창고 도킹')]
     if quantity == 2:
@@ -77,7 +82,9 @@ class ProcessController:
             self.rejected.extend(saved.get('rejected', []))
             self.log.extend(saved.get('log', []))
             if self.order:
-                self.plan = make_plan(self.order['product_type'], self.order['quantity'])
+                self.plan = ([Step(**step) for step in self.order['process_plan']]
+                             if self.order.get('plan_mode') == 'continuous-v1' else
+                             make_plan(self.order['product_type'], self.order['quantity'], self.order.get('products')))
                 if self.order['status'] not in ('idle', 'done'):
                     self.order.update(status='failed', pause_requested=False,
                                       fault='이전 실행의 미완료 주문입니다. 장치 상태·초기 배치 복구가 필요합니다.')
@@ -162,7 +169,7 @@ class ProcessController:
                     raise ValueError('수동 이동 또는 이전 지시의 종료·정지 확인이 필요합니다.')
                 if self.order and self.order['status'] != 'done':
                     raise ValueError('진행 중이거나 복구가 필요한 주문이 있습니다.')
-                plan = make_plan(command.get('product_type'), command.get('quantity'))
+                plan = make_plan(command.get('product_type'), command.get('quantity'), command.get('products'))
                 automatic = command.get('auto_advance', True)
                 if type(automatic) is not bool:
                     raise ValueError('auto_advance는 boolean이어야 합니다.')
@@ -176,6 +183,8 @@ class ProcessController:
                               'stage_count': len(plan), 'completed': 0,
                               'product_remaining': command['quantity'], 'transport_remaining': command['quantity'],
                               'auto_advance': automatic, 'pause_requested': False, 'fault': ''}
+                if 'products' in command:
+                    self.order['products'] = list(command['products'])
                 self.note(f"주문 {self.order['id']} · {command['product_type']} {command['quantity']}개")
             elif action == 'manual_move' and (not self.order or self.order['status'] == 'done'):
                 expected_id = self.order['id'] if self.order else None

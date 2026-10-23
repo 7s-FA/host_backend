@@ -9,7 +9,7 @@ from rclpy.node import Node
 from rclpy.executors import ExternalShutdownException
 from std_msgs.msg import String
 from action_transport import ActionTransport
-from full_reset import FullResetController as ProcessController
+from continuous_process import ContinuousProcessController as ProcessController
 from http_adapter import HttpAdapter
 
 

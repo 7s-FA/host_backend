@@ -14,10 +14,10 @@ from control import ProcessController, Step, make_plan
 PLAN_MODE = 'parallel-v1'
 
 
-def make_parallel_plan(product, quantity):
-    return [replace(step, command='BUILD_LOAD_' + product,
+def make_parallel_plan(product, quantity, products=None):
+    return [replace(step, command='BUILD_LOAD_' + step.command.rsplit('_', 1)[1],
                     label=f'{step.product_no}번 조립·적재 연속') if step.device == 'arm2' else step
-            for step in make_plan(product, quantity)] + [Step('arm2', 'BUILD_SLIDE', 0, '리니어 조립 위치 사전 준비')]
+            for step in make_plan(product, quantity, products)] + [Step('arm2', 'BUILD_SLIDE', 0, '리니어 조립 위치 사전 준비')]
 
 
 def load_index(quantity, build_index):
@@ -57,7 +57,9 @@ class ParallelProcessController(ProcessController):
         super().__init__(*args, **kwargs)
         self.restoring = False
         if self.parallel_order():
-            self.plan = make_parallel_plan(self.order['product_type'], self.order['quantity'])
+            self.plan = ([Step(**step) for step in self.order['process_plan']]
+                         if self.order.get('plan_mode') == 'continuous-v1' else
+                         make_parallel_plan(self.order['product_type'], self.order['quantity'], self.order.get('products')))
             state = saved.get('parallel_state', {})
             self.finished = set(state.get('finished', []))
             self.accepted_transports = set(state.get('accepted_transports', []))
@@ -77,7 +79,17 @@ class ParallelProcessController(ProcessController):
             self.save()
 
     def parallel_order(self):
-        return bool(self.order and self.order.get('plan_mode') == PLAN_MODE)
+        return bool(self.order and self.order.get('plan_mode') in (PLAN_MODE, 'continuous-v1'))
+
+    def order_dependencies(self):
+        if self.order.get('plan_mode') == 'continuous-v1':
+            return [set(items) for items in self.order['process_dependencies']]
+        return dependencies(self.order['quantity'])
+
+    def order_load_index(self, index):
+        if self.order.get('plan_mode') == 'continuous-v1':
+            return self.order['process_load_steps'][str(index)]
+        return load_index(self.order['quantity'], index)
 
     def extra_state(self):
         return {'parallel_state': {
@@ -151,7 +163,7 @@ class ParallelProcessController(ProcessController):
             self.failed_steps.clear()
             self.stopped.clear()
             self.order['plan_mode'] = PLAN_MODE
-            self.plan = make_parallel_plan(self.order['product_type'], self.order['quantity'])
+            self.plan = make_parallel_plan(self.order['product_type'], self.order['quantity'], self.order.get('products'))
             self.order['stage_count'] = len(self.plan)
             self.note('병렬 공정 · 선행 Result 확인 · 공용 통로는 이동로봇 한 대만 사용')
             self.save()
@@ -260,14 +272,14 @@ class ParallelProcessController(ProcessController):
                 self.order['stage'] = len(self.finished)
             if message in ('ERROR', 'PAUSED'):
                 task['invalid'] = True
-                self.failed_steps.add(load_index(self.order['quantity'], index) if task.get('build_done') else index)
+                self.failed_steps.add(self.order_load_index(index) if task.get('build_done') else index)
                 self.fail(f'{device} {message} · 현장 확인 필요', uncertain=True, device=device)
         elif kind == 'done':
             success = (task['accepted'] and not task.get('invalid') and not data.get('uncertain')
                        and data.get('status') == 4 and data.get('success') is True and data.get('message') == 'IDLE')
             if data.get('uncertain'):
                 task['invalid'] = True
-                self.failed_steps.add(load_index(self.order['quantity'], index) if task.get('build_done') else index)
+                self.failed_steps.add(self.order_load_index(index) if task.get('build_done') else index)
                 self.fail(f'{device} 결과 미확인', uncertain=True, device=device)
             else:
                 del self.inflight[request_id]
@@ -276,7 +288,7 @@ class ParallelProcessController(ProcessController):
                     self.finished.add(index)
                     self.failed_steps.discard(index)
                     if task['command'].startswith('BUILD_LOAD_'):
-                        loading = load_index(self.order['quantity'], index)
+                        loading = self.order_load_index(index)
                         self.finished.add(loading)
                         self.failed_steps.discard(loading)
                     if task['command'].startswith(('LOAD_', 'BUILD_LOAD_')):
@@ -284,7 +296,7 @@ class ParallelProcessController(ProcessController):
                         self.order['product_remaining'] -= 1
                     self.note(f"완료 {task['label']} · 작업 {request_id}", device)
                 else:
-                    self.failed_steps.add(load_index(self.order['quantity'], index) if task.get('build_done') else index)
+                    self.failed_steps.add(self.order_load_index(index) if task.get('build_done') else index)
                     self.fail(f"{device} {task['command']}: {data.get('message', '결과 오류')}", device=device)
                 self.order['stage'] = len(self.finished)
                 self.sync_active()
@@ -334,7 +346,7 @@ class ParallelProcessController(ProcessController):
                     reason = 'Action 최종 결과 시간 초과'
             if reason:
                 task['invalid'] = True
-                self.failed_steps.add(load_index(self.order['quantity'], task['index'])
+                self.failed_steps.add(self.order_load_index(task['index'])
                                       if task.get('build_done') else task['index'])
                 self.fail(f"{task['device']} {reason}", uncertain=True, device=task['device'])
                 return
@@ -356,7 +368,7 @@ class ParallelProcessController(ProcessController):
             return  # Manual next launches one eligible wave, then waits for every Result.
         occupied = set().union(*(resources(self.plan[t['index']]) for t in self.inflight.values()))
         active_indices = {t['index'] for t in self.inflight.values()}
-        for index, prerequisites in enumerate(dependencies(self.order['quantity'])):
+        for index, prerequisites in enumerate(self.order_dependencies()):
             if index in self.finished or index in active_indices or not prerequisites <= self.finished:
                 continue
             step = self.plan[index]
@@ -392,7 +404,7 @@ class ParallelProcessController(ProcessController):
                 indices = sorted(self.failed_steps) or [i for i in range(len(self.plan)) if i not in self.finished]
                 order['stage_label'] = ' / '.join(self.plan[i].label for i in indices)[:200]
             elif order['status'] != 'done':
-                order['stage_label'] = ' + '.join(self.plan[i].label for i, deps in enumerate(dependencies(order['quantity']))
+                order['stage_label'] = ' + '.join(self.plan[i].label for i, deps in enumerate(self.order_dependencies())
                                                  if i not in self.finished and deps <= self.finished)
             from control import GROUPS
             for group, members in GROUPS.items():
